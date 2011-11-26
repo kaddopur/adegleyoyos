@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <title>Adegleyoyos</title>
+    <meta name="description" content="">
+    <meta name="author" content="Jason C. Huang">
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- Le styles -->
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+      
+      .cover {
+        border-radius: 10px;
+        margin: 0 0 20px;
+      }
+      
+      .thumbnail{
+        float: left;
+        margin: 2px;
+        width: 100px;
+        height: 100px;
+        z-index: 0;
+        border: 1px solid #ddd;
+      }
+      
+      .thumbnail > img{
+        max-width: 100px;
+      }
+
+      .thumbnail:hover{
+        background-color: transparent;
+        z-index: 50;
+      }
+
+      .thumbnail span{ /*CSS for enlarged image*/
+        clear: left;
+        position: relative;
+        left: -1000px;
+        visibility: hidden;
+      }
+
+      .thumbnail span img{ /*CSS for enlarged image*/
+        width: 640px;
+      }
+
+      .thumbnail:hover span{ /*CSS for enlarged image on hover*/
+        visibility: visible;
+        top: 0px;
+        left: 0px; /*position where enlarged image should offset horizontally */
+      }
+    </style>
+    
+    <!-- Le javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="script/bootstrap-tabs.js"></script>
+    <script src="script/bootstrap-modal.js"></script>
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container" >
+          <a class="brand" href="/" style="padding:7px 20px 3px; margin:0;"><img src="image/logo.png" style="height:30px;"></a>
+          <ul class="nav">
+            <li><a href="/">主頁</a></li>
+            <li class="active"><a href="#">產品介紹</a></li>
+            <li><a href="#">教學資源</a></li>
+            <li><a href="#">台灣溜溜球社群</a></li>
+            <li><a href="#">關於Adegleyoyos</a></li>
+            <li><a href="/contact">聯絡我們</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <ul class="tabs" data-tabs="tabs">
+        <li class="active"><a href="#psg">psg</a></li>
+        <li><a href="#comet">comet</a></li>
+        <li><a href="#glaze">glaze</a></li>
+        <li><a href="#rhongto">rhongto</a></li>
+        <li><a href="#sandglass">sandglass</a></li>
+        <li><a href="#formosa">formosa</a></li>
+        <li><a href="#n235">n235</a></li>
+      </ul>
+      <div id="my-tab-content" class="tab-content">
+        <div class="active tab-pane" id="psg">
+          <div class="hero-unit" style="background-image: url(image/psg/cover.png);">
+            <h1>PSG全新推出</h1>
+            <p>由台灣本土溜溜球品牌Adegleyoyos所製作的PSG開始販賣了！<br />顏色繽紛的PSG適合所有剛接觸溜溜球的新朋友。<br /><br /><br /></p>
+          </div>
+          <div class="row">
+            <div class="span4">
+              <h2>規格</h2>
+              <dl>
+                <dt>Shape</dt>
+                <dd>Sandglass</dd>
+                
+                <dt>Weight</dt>
+                <dd>64.3 g</dd>
+                
+                <dt>Width</dt>
+                <dd>46 mm</dd>
+                
+                <dt>Effective Width</dt>
+                <dd>37.56 mm</dd>
+                
+                <dt>Diameter</dt>
+                <dd>55 mm</dd>
+                
+                <dt>Gap Width</dt>
+                <dd>4.2 mm</dd>
+                
+                <dt>Bearing Size</dt>
+                <dd>C Bearing</dd>
+                
+                <dt>Gap Type</dt>
+                <dd>Speacer</dd>
+                
+                <dt>Stock Response System</dt>
+                <dd>Silicone (thickness 1 mm)</dd>
+              </dl>
+            </div>
+            
+            <div class="span8">
+              <h2>圖片集</h2>
+              <div class="thumbnail"><img src="image/psg/thumb/1.jpg" /><span><img src="image/psg/1.jpg" /></span></div>
+              <div class="thumbnail"><img src="image/psg/thumb/2.jpg" /><span><img src="image/psg/2.jpg" /></span></div>
+              <div class="thumbnail"><img src="image/psg/thumb/3.jpg" /><span><img src="image/psg/3.jpg" /></span></div>
+              <div class="thumbnail"><img src="image/psg/thumb/4.jpg" /><span><img src="image/psg/4.jpg" /></span></div>
+              <div class="thumbnail"><img src="image/psg/thumb/5.jpg" /><span><img src="image/psg/5.jpg" /></span></div>
+              <div class="thumbnail"><img src="image/psg/thumb/6.jpg" /><span><img src="image/psg/6.jpg" /></span></div>
+              <div class="thumbnail"><img src="image/psg/thumb/7.jpg" /><span><img src="image/psg/7.jpg" /></span></div>
+              <div class="thumbnail"><img src="image/psg/thumb/8.jpg" /><span><img src="image/psg/8.jpg" /></span></div>
+              <div class="thumbnail"><img src="image/psg/thumb/9.jpg" /><span><img src="image/psg/9.jpg" /></span></div>
+              <div class="thumbnail"><img src="image/psg/thumb/10.jpg" /><span><img src="image/psg/10.jpg" /></span></div>
+              <div class="thumbnail"><img src="image/psg/thumb/11.jpg" /><span><img src="image/psg/11.jpg" /></span></div>
+              
+            </div>
+            
+            <div class="span4">
+              <h2>商店</h2>
+              <a href="http://class.ruten.com.tw/user/index00.php?s=wingstyle"><img src="image/logo_ruten.png" style="max-width: 150px;"></a>
+            </div>
+          </div>
+          
+        </div>
+        
+        <div class="tab-pane" id="comet">
+          <p>cometcometcometcometcometcometcometcometcometcometcometcometcometcometcometcometcometcometcometcometcometcomet</p>
+        </div>
+        
+        <div class="tab-pane" id="glaze">
+          <p>glazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglazeglaze</p>
+        </div>
+        
+        <div class="tab-pane" id="rhongto">
+          <p>rhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongto</p>
+        </div>
+        
+        <div class="tab-pane" id="sandglass">
+          <p>sandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglass</p>
+        </div>
+        
+        <div class="tab-pane" id="formosa">
+          <p>formosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosa</p>
+        </div>
+        
+        <div class="tab-pane" id="n235">
+          <p>n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235</p>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; Adegleyoyos 2011</p>
+      </footer>
+
+    </div> <!-- /container -->
+</html>

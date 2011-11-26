@@ -25,9 +25,17 @@ class ContactPage(webapp.RequestHandler):
     path = os.path.join(os.path.dirname(__file__), 'contact.html')
     self.response.out.write(template.render(path, template_values))
     
+    
+class ProductPage(webapp.RequestHandler):
+  def get(self):
+    template_values = {}
+    path = os.path.join(os.path.dirname(__file__), 'product.html')
+    self.response.out.write(template.render(path, template_values))
+    
 
 application = webapp.WSGIApplication([('/', MainPage),
-                                      ('/contact', ContactPage)],
+                                      ('/contact', ContactPage),
+                                      ('/product', ProductPage)],
                                      debug=True)
 
 def main():
