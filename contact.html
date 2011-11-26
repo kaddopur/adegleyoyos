@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <title>Adegleyoyos</title>
+    <meta name="description" content="">
+    <meta name="author" content="Jason C. Huang">
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- Le styles -->
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+    
+    <!-- Le javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="script/bootstrap-modal.js"></script>
+  </head>
+
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container" >
+          <a class="brand" href="/" style="padding:5px 20px; margin:0;"><img src="image/logo.png" style="height:30px;"></a>
+          <ul class="nav">
+            <li><a href="/">主頁</a></li>
+            <li><a href="#about">關於Adegleyoyos</a></li>
+            <li class="active"><a href="#">聯絡我們</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+     
+      <div class="row">
+        <div class="span6">
+          <h2>facebook</h2>
+          <div class="fb-like-box" data-href="https://www.facebook.com/adegleyoyos" data-width="335" data-height="392" data-show-faces="true" data-stream="false" data-header="false" style="float: left;"></div>
+        </div>
+        
+        <div class="span6">
+          <h2>twitter</h2>
+          <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+          <script>
+          new TWTR.Widget({
+            version: 2,
+            type: 'profile',
+            rpp: 10,
+            interval: 30000,
+            width: 'auto',
+            height: 300,
+            theme: {
+              shell: {
+                background: '#dddddd',
+                color: '#222222'
+              },
+              tweets: {
+                background: '#ffffff',
+                color: '#222222',
+                links: '#04c276'
+              }
+            },
+            features: {
+              scrollbar: true,
+              loop: false,
+              live: false,
+              behavior: 'all'
+            }
+          }).render().setUser('adegleyoyotw').start();
+          </script>
+        </div>
+        
+        <div class="span4">
+          <h2>e-mail</h2>
+          <img src="image/mail.png">
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; Adegleyoyos 2011</p>
+      </footer>
+
+    </div> <!-- /container -->
+</html>
