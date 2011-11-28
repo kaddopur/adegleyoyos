@@ -19,10 +19,10 @@ class MainPage(webapp.RequestHandler):
     self.response.out.write(template.render(path, template_values))
 
     
-class ContactPage(webapp.RequestHandler):
+class AboutPage(webapp.RequestHandler):
   def get(self):
     template_values = {}
-    path = os.path.join(os.path.dirname(__file__), 'contact.html')
+    path = os.path.join(os.path.dirname(__file__), 'about.html')
     self.response.out.write(template.render(path, template_values))
     
     
@@ -34,7 +34,7 @@ class ProductPage(webapp.RequestHandler):
     
 
 application = webapp.WSGIApplication([('/', MainPage),
-                                      ('/contact', ContactPage),
+                                      ('/about', AboutPage),
                                       ('/product', ProductPage)],
                                      debug=True)
 
