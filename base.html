@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <title>Adegleyoyos</title>
+    <meta name="description" content="">
+    <meta name="author" content="Jason C. Huang">
+    
+    <link rel="icon" href="image/favicon.ico">
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- Le styles -->
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+      }
+      {% block style %}{% endblock %}
+    </style>
+    
+    
+    <!-- Le javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="script/bootstrap-tabs.js"></script>
+    <script src="script/bootstrap-modal.js"></script>
+    <script>
+      //create onDomReady Event
+      window.onDomReady = DomReady;
+
+      //Setup the event
+      function DomReady(fn) {
+          //W3C
+          if(document.addEventListener) {
+              document.addEventListener("DOMContentLoaded", fn, false);
+          }
+          //IE
+          else {
+              document.onreadystatechange = function(){readyState(fn)};
+          }
+      }
+
+      //IE execute function
+      function readyState(fn) {
+          //dom is ready for interaction
+          if(document.readyState == "interactive") {
+              fn();
+          }
+      }
+    
+      //execute as soon as DOM is loaded
+      window.onDomReady(onReady);
+
+      //do on ready
+      function onReady() {
+        var target = {{ target }} ;
+        target = target[0];
+        
+        var root = document.getElementById('link_'+target)
+        root.setAttribute("class", "active");
+        root.firstChild.setAttribute("href", "#");
+        
+        if(target == 'index'){
+          document.getElementById("link_logo").setAttribute("href", "#");
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    {% block facebook %}{% endblock %}
+    {% block script %}{% endblock %}
+    <div class="topbar">
+      <div class="fill">
+        <div class="container" >
+          <a id="link_logo" class="brand" href="/" style="padding:7px 20px 3px 0px; margin:0;"><img src="image/logo.png" style="height:30px;"></a>
+          <ul class="nav">
+            <li id="link_index"><a href="/">主頁</a></li>
+            <li id="link_product"><a href="/product">產品介紹</a></li>
+            <li id="link_tutorial"><a href="#">線上教學</a></li>
+            <li id="link_commu"><a href="#">溜溜球社群</a></li>
+            <li id="link_about"><a href="/about">關於我們</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      {% block content %}{% endblock %}
+      <footer>
+        <div class="row">
+            <div class="span4">
+              <pp>&copy; Adegleyoyos 2011</p>
+            </div>
+            
+            <div class="span12">
+              <p style="text-align: right;">
+              黃麟凱 HUANG Lin-Kai<br />
+              adegleyoyo [AT] gmail.com<br />
+              +886-919226396
+            </div>
+      </footer>
+    </div> <!-- /container -->
+</html>

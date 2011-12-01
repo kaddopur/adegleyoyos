@@ -1,348 +1,291 @@
-﻿<!DOCTYPE html>
-<html lang="zh-TW">
-  <head>
-    <meta charset="utf-8">
-    <title>Adegleyoyos</title>
-    <meta name="description" content="">
-    <meta name="author" content="Jason C. Huang">
+﻿{% extends "base.html" %}
+
+{% block style %}
+  .cover {
+    border-radius: 10px;
+    margin: 0 0 20px;
+  }
+  
+  .thumbnail{
+    float: left;
+    margin: 2px;
+    width: 100px;
+    height: 100px;
+    z-index: 0;
+    border: 1px solid #ddd;
+  }
+  
+  .thumbnail > img{
+    max-width: 100px;
+  }
+
+  .thumbnail:hover{
+    background-color: transparent;
+    z-index: 50;
+  }
+
+  .thumbnail span{ /*CSS for enlarged image*/
+    clear: left;
+    position: relative;
+    left: -1000px;
+    visibility: hidden;
+  }
+
+  .thumbnail span img{ /*CSS for enlarged image*/
+    width: 640px;
+  }
+
+  .thumbnail:hover span{ /*CSS for enlarged image on hover*/
+    visibility: visible;
+    top: 0px;
+    left: 0px; /*position where enlarged image should offset horizontally */
+  }
+  
+  .vender {
+    padding: 0 8px 0 0;
+    max-width: 150px;
+    max-height: 120px;
+    vertical-align: middle;
+    -webkit-transition: -webkit-transform 0.5s;
+  }
+  
+  .vender:hover {
+    -webkit-transform: translate(-3px, 0);
+  }
+{% endblock %}
+
     
-    <link rel="icon" href="image/favicon.ico">
-    
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    
-    <!-- Le styles -->
-    <link rel="stylesheet" href="style/bootstrap.css">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-      }
+{% block content %}
+<ul class="pills" data-tabs="tabs">
+  <li class="active"><a href="#psg">psg</a></li>
+  <li><a href="#comet">Comet</a></li>
+  <li><a href="#glaze">Glaze</a></li>
+  <!--<li><a href="#rhongto">RhongTo</a></li>-->
+  <li><a href="#sandglass">Sandglass</a></li>
+  <li><a href="#formosa">Formosa</a></li>
+  <!--<li><a href="#n235">N23.5&deg;</a></li>-->
+</ul>
+
+<div id="my-tab-content" class="tab-content">
+  <div class="active tab-pane" id="psg">
+    <div class="hero-unit" style="background-image: url(image/psg/cover.png);">
+      <h1>PSG全新推出</h1>
+      <p>
+        鮮豔繽紛的配色大膽的展現玩心<br />
+        最適合初次接觸溜溜球的你<br />
+        <br />
+        <br />
+      </p>
+    </div>
+    <div class="row">
+      <div class="span4">
+        <h2>規格</h2>
+        <dl>
+          <dt>Shape</dt>
+          <dd>Sandglass</dd>
+          
+          <dt>Weight</dt>
+          <dd>64.3 g</dd>
+          
+          <dt>Width</dt>
+          <dd>46 mm</dd>
+          
+          <dt>Effective Width</dt>
+          <dd>37.56 mm</dd>
+          
+          <dt>Diameter</dt>
+          <dd>55 mm</dd>
+          
+          <dt>Gap Width</dt>
+          <dd>4.2 mm</dd>
+          
+          <dt>Bearing Size</dt>
+          <dd>C Bearing</dd>
+          
+          <dt>Gap Type</dt>
+          <dd>Speacer</dd>
+          
+          <dt>Stock Response System</dt>
+          <dd>Silicone (thickness 1 mm)</dd>
+        </dl>
+      </div>
       
-      .cover {
-        border-radius: 10px;
-        margin: 0 0 20px;
-      }
+      <div class="span8">
+        <h2>圖片集</h2>
+        <div class="thumbnail"><img src="image/psg/thumb/1.jpg" /><span><img src="image/psg/1.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/psg/thumb/2.jpg" /><span><img src="image/psg/2.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/psg/thumb/3.jpg" /><span><img src="image/psg/3.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/psg/thumb/4.jpg" /><span><img src="image/psg/4.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/psg/thumb/5.jpg" /><span><img src="image/psg/5.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/psg/thumb/6.jpg" /><span><img src="image/psg/6.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/psg/thumb/7.jpg" /><span><img src="image/psg/7.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/psg/thumb/8.jpg" /><span><img src="image/psg/8.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/psg/thumb/9.jpg" /><span><img src="image/psg/9.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/psg/thumb/10.jpg" /><span><img src="image/psg/10.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/psg/thumb/11.jpg" /><span><img src="image/psg/11.jpg" /></span></div>
+      </div>
       
-      .thumbnail{
-        float: left;
-        margin: 2px;
-        width: 100px;
-        height: 100px;
-        z-index: 0;
-        border: 1px solid #ddd;
-      }
-      
-      .thumbnail > img{
-        max-width: 100px;
-      }
-
-      .thumbnail:hover{
-        background-color: transparent;
-        z-index: 50;
-      }
-
-      .thumbnail span{ /*CSS for enlarged image*/
-        clear: left;
-        position: relative;
-        left: -1000px;
-        visibility: hidden;
-      }
-
-      .thumbnail span img{ /*CSS for enlarged image*/
-        width: 640px;
-      }
-
-      .thumbnail:hover span{ /*CSS for enlarged image on hover*/
-        visibility: visible;
-        top: 0px;
-        left: 0px; /*position where enlarged image should offset horizontally */
-      }
-      
-      .vender {
-        padding: 0 8px 0 0;
-        max-width: 150px;
-        max-height: 120px;
-        vertical-align: middle;
-        -webkit-transition: -webkit-transform 0.5s;
-      }
-      
-      .vender:hover {
-        -webkit-transform: translate(-3px, 0);
-      }
-    </style>
-    
-    <!-- Le javascript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script src="script/bootstrap-tabs.js"></script>
-    <script src="script/bootstrap-modal.js"></script>
-  </head>
-
-  <body>
-
-    <div class="topbar">
-      <div class="fill">
-        <div class="container" >
-          <a class="brand" href="/" style="padding:7px 20px 3px 0px; margin:0;"><img src="image/logo.png" style="height:30px;"></a>
-          <ul class="nav">
-            <li><a href="/">主頁</a></li>
-            <li class="active"><a href="#">產品介紹</a></li>
-            <li><a href="#">線上教學</a></li>
-            <li><a href="#">溜溜球社群</a></li>
-            <li><a href="/about">關於我們</a></li>
-          </ul>
-        </div>
+      <div class="span4">
+        <h2>商店</h2>
+        <a href="http://class.ruten.com.tw/user/index00.php?s=wingstyle" target="_blank"><img class="vender" src="image/vender/ruten.png"></a>
       </div>
     </div>
-
-    <div class="container">
-      <ul class="pills" data-tabs="tabs">
-        <li class="active"><a href="#psg">psg</a></li>
-        <li><a href="#comet">Comet</a></li>
-        <li><a href="#glaze">Glaze</a></li>
-        <!--<li><a href="#rhongto">RhongTo</a></li>-->
-        <li><a href="#sandglass">Sandglass</a></li>
-        <li><a href="#formosa">Formosa</a></li>
-        <!--<li><a href="#n235">N23.5&deg;</a></li>-->
-      </ul>
-      
-      <div id="my-tab-content" class="tab-content">
-        <div class="active tab-pane" id="psg">
-          <div class="hero-unit" style="background-image: url(image/psg/cover.png);">
-            <h1>PSG全新推出</h1>
-            <p>
-              鮮豔繽紛的配色大膽的展現玩心<br />
-              最適合初次接觸溜溜球的你<br />
-              <br />
-              <br />
-            </p>
-          </div>
-          <div class="row">
-            <div class="span4">
-              <h2>規格</h2>
-              <dl>
-                <dt>Shape</dt>
-                <dd>Sandglass</dd>
-                
-                <dt>Weight</dt>
-                <dd>64.3 g</dd>
-                
-                <dt>Width</dt>
-                <dd>46 mm</dd>
-                
-                <dt>Effective Width</dt>
-                <dd>37.56 mm</dd>
-                
-                <dt>Diameter</dt>
-                <dd>55 mm</dd>
-                
-                <dt>Gap Width</dt>
-                <dd>4.2 mm</dd>
-                
-                <dt>Bearing Size</dt>
-                <dd>C Bearing</dd>
-                
-                <dt>Gap Type</dt>
-                <dd>Speacer</dd>
-                
-                <dt>Stock Response System</dt>
-                <dd>Silicone (thickness 1 mm)</dd>
-              </dl>
-            </div>
-            
-            <div class="span8">
-              <h2>圖片集</h2>
-              <div class="thumbnail"><img src="image/psg/thumb/1.jpg" /><span><img src="image/psg/1.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/psg/thumb/2.jpg" /><span><img src="image/psg/2.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/psg/thumb/3.jpg" /><span><img src="image/psg/3.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/psg/thumb/4.jpg" /><span><img src="image/psg/4.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/psg/thumb/5.jpg" /><span><img src="image/psg/5.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/psg/thumb/6.jpg" /><span><img src="image/psg/6.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/psg/thumb/7.jpg" /><span><img src="image/psg/7.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/psg/thumb/8.jpg" /><span><img src="image/psg/8.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/psg/thumb/9.jpg" /><span><img src="image/psg/9.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/psg/thumb/10.jpg" /><span><img src="image/psg/10.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/psg/thumb/11.jpg" /><span><img src="image/psg/11.jpg" /></span></div>
-            </div>
-            
-            <div class="span4">
-              <h2>商店</h2>
-              <a href="http://class.ruten.com.tw/user/index00.php?s=wingstyle" target="_blank"><img class="vender" src="image/vender/ruten.png"></a>
-            </div>
-          </div>
-        </div><!--psg-->
-        
-        <div class="tab-pane" id="comet">
-          <div class="hero-unit" style="background-image: url(image/comet/cover.png);">
-            <h1>Comet</h1>
-            <p>
-              Adegleyoyos x 新加坡溜溜球冠軍 Iskandar Shah 跨國合作<br />
-              充滿侵略性的惹火外觀<br />
-              讓你不管在何處都是最搶眼的新星<br />
-              <br />
-            </p>
-          </div>
+  </div><!--psg-->
+  
+  <div class="tab-pane" id="comet">
+    <div class="hero-unit" style="background-image: url(image/comet/cover.png);">
+      <h1>Comet</h1>
+      <p>
+        Adegleyoyos x 新加坡溜溜球冠軍 Iskandar Shah 跨國合作<br />
+        充滿侵略性的惹火外觀<br />
+        讓你不管在何處都是最搶眼的新星<br />
+        <br />
+      </p>
+    </div>
+    
+    <div class="row">
+      <div class="span4">
+        <h2>規格</h2>
+        <dl>
+          <dt>Shape</dt>
+          <dd>Sandglass</dd>
           
-          <div class="row">
-            <div class="span4">
-              <h2>規格</h2>
-              <dl>
-                <dt>Shape</dt>
-                <dd>Sandglass</dd>
-                
-                <dt>Weight</dt>
-                <dd>68.5 g</dd>
-                
-                <dt>Width</dt>
-                <dd>40.0 mm</dd>
-                
-                <dt>Effective Width</dt>
-                <dd>35.36 mm</dd>
-                
-                <dt>Diameter</dt>
-                <dd>56 mm</dd>
-                
-                <dt>Gap Width</dt>
-                <dd>4.56 mm</dd>
-                
-                <dt>Bearing Size</dt>
-                <dd>C Bearing</dd>
-                
-                <dt>Gap Type</dt>
-                <dd>Fixed</dd>
-                
-                <dt>Stock Response System</dt>
-                <dd>Silicone (thickness 1 mm)</dd>
-              </dl>
-            </div>
+          <dt>Weight</dt>
+          <dd>68.5 g</dd>
           
-            <div class="span8">
-              <h2>圖片集</h2>
-              <div class="thumbnail"><img src="image/comet/thumb/1.jpg" /><span><img src="image/comet/1.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/comet/thumb/2.jpg" /><span><img src="image/comet/2.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/comet/thumb/3.jpg" /><span><img src="image/comet/3.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/comet/thumb/4.jpg" /><span><img src="image/comet/4.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/comet/thumb/5.jpg" /><span><img src="image/comet/5.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/comet/thumb/6.jpg" /><span><img src="image/comet/6.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/comet/thumb/7.jpg" /><span><img src="image/comet/7.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/comet/thumb/8.jpg" /><span><img src="image/comet/8.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/comet/thumb/9.jpg" /><span><img src="image/comet/9.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/comet/thumb/10.jpg" /><span><img src="image/comet/10.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/comet/thumb/11.jpg" /><span><img src="image/comet/11.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/comet/thumb/12.jpg" /><span><img src="image/comet/12.jpg" /></span></div>
-            </div>
-            
-            <div class="span4">
-              <h2>商店</h2>
-              <a href="http://yoyoz.co.uk/" target="_blank"><img class="vender" src="image/vender/yoyoz.png"></a>
-            </div>
-          </div>
-        </div><!--comet-->
-        
-        <div class="tab-pane" id="glaze">
-          <div class="hero-unit" style="background-image: url(image/glaze/cover.png);">
-            <h1>Glaze</h1>
-            <p>
-              優雅精細的古典花紋設計，一眼難忘<br />
-              細緻緊實的金屬球體，讓溜溜球行雲流水地在手中來去自如<br />
-              <br />
-              <br />
-            </p>
-          </div>
+          <dt>Width</dt>
+          <dd>40.0 mm</dd>
           
-          <div class="row">
-            <div class="span4">
-              <h2>規格</h2>
-              <dl>
-                <dt>Shape</dt>
-                <dd>Sandglass</dd>
-                
-                <dt>Weight</dt>
-                <dd>63.6 g</dd>
-                
-                <dt>Width</dt>
-                <dd>37.8 mm</dd>
-                
-                <dt>Effective Width</dt>
-                <dd>32.96 mm</dd>
-                
-                <dt>Diameter</dt>
-                <dd>50 mm</dd>
-                
-                <dt>Gap Width</dt>
-                <dd>4.56 mm</dd>
-                
-                <dt>Bearing Size</dt>
-                <dd>C Bearing</dd>
-                
-                <dt>Gap Type</dt>
-                <dd>Fixed</dd>
-                
-                <dt>Stock Response System</dt>
-                <dd>Silicone (thickness 0.5 mm)</dd>
-              </dl>
-            </div>
+          <dt>Effective Width</dt>
+          <dd>35.36 mm</dd>
           
-            <div class="span8">
-              <h2>圖片集</h2>
-              <div class="thumbnail"><img src="image/glaze/thumb/1.jpg" /><span><img src="image/glaze/1.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/2.jpg" /><span><img src="image/glaze/2.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/3.jpg" /><span><img src="image/glaze/3.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/4.jpg" /><span><img src="image/glaze/4.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/5.jpg" /><span><img src="image/glaze/5.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/6.jpg" /><span><img src="image/glaze/6.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/7.jpg" /><span><img src="image/glaze/7.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/8.jpg" /><span><img src="image/glaze/8.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/9.jpg" /><span><img src="image/glaze/9.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/10.jpg" /><span><img src="image/glaze/10.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/11.jpg" /><span><img src="image/glaze/11.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/12.jpg" /><span><img src="image/glaze/12.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/13.jpg" /><span><img src="image/glaze/13.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/14.jpg" /><span><img src="image/glaze/14.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/15.jpg" /><span><img src="image/glaze/15.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/16.jpg" /><span><img src="image/glaze/16.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/17.jpg" /><span><img src="image/glaze/17.jpg" /></span></div>
-              <div class="thumbnail"><img src="image/glaze/thumb/18.jpg" /><span><img src="image/glaze/18.jpg" /></span></div>
-            </div>
-            
-            <div class="span4">
-              <h2>商店</h2>
-              <a href="http://www.rakuten.ne.jp/gold/yo-yo/" target="_blank"><img class="vender" src="image/vender/spingear.png"></a>
-            </div>
-          </div>
-        </div><!--glaze-->
-        
-        <div class="tab-pane" id="rhongto">
-          <p>rhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongto</p>
-        </div><!--rhongto-->
-        
-        <div class="tab-pane" id="sandglass">
-          <p>sandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglass</p>
-        </div><!--sandglass-->
-        
-        <div class="tab-pane" id="formosa">
-          <p>formosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosa</p>
-        </div><!--formosa-->
-        
-        <div class="tab-pane" id="n235">
-          <p>n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235</p>
-        </div><!--n235-->
+          <dt>Diameter</dt>
+          <dd>56 mm</dd>
+          
+          <dt>Gap Width</dt>
+          <dd>4.56 mm</dd>
+          
+          <dt>Bearing Size</dt>
+          <dd>C Bearing</dd>
+          
+          <dt>Gap Type</dt>
+          <dd>Fixed</dd>
+          
+          <dt>Stock Response System</dt>
+          <dd>Silicone (thickness 1 mm)</dd>
+        </dl>
       </div>
-
-      <footer>
-        <div class="row">
-            <div class="span4">
-              <pp>&copy; Adegleyoyos 2011</p>
-            </div>
-            
-            <div class="span12">
-              <p style="text-align: right;">
-              黃麟凱 HUANG Lin-Kai<br />
-              adegleyoyo [AT] gmail.com<br />
-              +886-919226396
-            </div>
-      </footer>
-
-    </div> <!-- /container -->
-</html>
+    
+      <div class="span8">
+        <h2>圖片集</h2>
+        <div class="thumbnail"><img src="image/comet/thumb/1.jpg" /><span><img src="image/comet/1.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/comet/thumb/2.jpg" /><span><img src="image/comet/2.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/comet/thumb/3.jpg" /><span><img src="image/comet/3.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/comet/thumb/4.jpg" /><span><img src="image/comet/4.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/comet/thumb/5.jpg" /><span><img src="image/comet/5.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/comet/thumb/6.jpg" /><span><img src="image/comet/6.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/comet/thumb/7.jpg" /><span><img src="image/comet/7.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/comet/thumb/8.jpg" /><span><img src="image/comet/8.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/comet/thumb/9.jpg" /><span><img src="image/comet/9.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/comet/thumb/10.jpg" /><span><img src="image/comet/10.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/comet/thumb/11.jpg" /><span><img src="image/comet/11.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/comet/thumb/12.jpg" /><span><img src="image/comet/12.jpg" /></span></div>
+      </div>
+      
+      <div class="span4">
+        <h2>商店</h2>
+        <a href="http://yoyoz.co.uk/" target="_blank"><img class="vender" src="image/vender/yoyoz.png"></a>
+      </div>
+    </div>
+  </div><!--comet-->
+  
+  <div class="tab-pane" id="glaze">
+    <div class="hero-unit" style="background-image: url(image/glaze/cover.png);">
+      <h1>Glaze</h1>
+      <p>
+        優雅精細的古典花紋設計，一眼難忘<br />
+        細緻緊實的金屬球體，讓溜溜球行雲流水地在手中來去自如<br />
+        <br />
+        <br />
+      </p>
+    </div>
+    
+    <div class="row">
+      <div class="span4">
+        <h2>規格</h2>
+        <dl>
+          <dt>Shape</dt>
+          <dd>Sandglass</dd>
+          
+          <dt>Weight</dt>
+          <dd>63.6 g</dd>
+          
+          <dt>Width</dt>
+          <dd>37.8 mm</dd>
+          
+          <dt>Effective Width</dt>
+          <dd>32.96 mm</dd>
+          
+          <dt>Diameter</dt>
+          <dd>50 mm</dd>
+          
+          <dt>Gap Width</dt>
+          <dd>4.56 mm</dd>
+          
+          <dt>Bearing Size</dt>
+          <dd>C Bearing</dd>
+          
+          <dt>Gap Type</dt>
+          <dd>Fixed</dd>
+          
+          <dt>Stock Response System</dt>
+          <dd>Silicone (thickness 0.5 mm)</dd>
+        </dl>
+      </div>
+    
+      <div class="span8">
+        <h2>圖片集</h2>
+        <div class="thumbnail"><img src="image/glaze/thumb/1.jpg" /><span><img src="image/glaze/1.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/2.jpg" /><span><img src="image/glaze/2.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/3.jpg" /><span><img src="image/glaze/3.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/4.jpg" /><span><img src="image/glaze/4.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/5.jpg" /><span><img src="image/glaze/5.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/6.jpg" /><span><img src="image/glaze/6.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/7.jpg" /><span><img src="image/glaze/7.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/8.jpg" /><span><img src="image/glaze/8.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/9.jpg" /><span><img src="image/glaze/9.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/10.jpg" /><span><img src="image/glaze/10.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/11.jpg" /><span><img src="image/glaze/11.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/12.jpg" /><span><img src="image/glaze/12.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/13.jpg" /><span><img src="image/glaze/13.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/14.jpg" /><span><img src="image/glaze/14.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/15.jpg" /><span><img src="image/glaze/15.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/16.jpg" /><span><img src="image/glaze/16.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/17.jpg" /><span><img src="image/glaze/17.jpg" /></span></div>
+        <div class="thumbnail"><img src="image/glaze/thumb/18.jpg" /><span><img src="image/glaze/18.jpg" /></span></div>
+      </div>
+      
+      <div class="span4">
+        <h2>商店</h2>
+        <a href="http://www.rakuten.ne.jp/gold/yo-yo/" target="_blank"><img class="vender" src="image/vender/spingear.png"></a>
+      </div>
+    </div>
+  </div><!--glaze-->
+  
+  <div class="tab-pane" id="rhongto">
+    <p>rhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongtorhongto</p>
+  </div><!--rhongto-->
+  
+  <div class="tab-pane" id="sandglass">
+    <p>sandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglasssandglass</p>
+  </div><!--sandglass-->
+  
+  <div class="tab-pane" id="formosa">
+    <p>formosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosaformosa</p>
+  </div><!--formosa-->
+  
+  <div class="tab-pane" id="n235">
+    <p>n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235n235</p>
+  </div><!--n235-->
+</div>
+{% endblock %}

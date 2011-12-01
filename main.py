@@ -14,21 +14,21 @@ from google.appengine.ext.webapp import template
 
 class MainPage(webapp.RequestHandler):
   def get(self):
-    template_values = {}
+    template_values = {'target': ['index']}
     path = os.path.join(os.path.dirname(__file__), 'index.html')
     self.response.out.write(template.render(path, template_values))
 
     
 class AboutPage(webapp.RequestHandler):
   def get(self):
-    template_values = {}
+    template_values = {'target': ['about']}
     path = os.path.join(os.path.dirname(__file__), 'about.html')
     self.response.out.write(template.render(path, template_values))
     
     
 class ProductPage(webapp.RequestHandler):
   def get(self):
-    template_values = {}
+    template_values = {'target': ['product']}
     path = os.path.join(os.path.dirname(__file__), 'product.html')
     self.response.out.write(template.render(path, template_values))
     
