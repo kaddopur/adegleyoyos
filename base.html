@@ -68,6 +68,12 @@
         if(target == 'index'){
           document.getElementById("link_logo").setAttribute("href", "#");
         }
+        
+        // make anchor alive (to be refine)
+        if(window.location.pathname == "/product"){
+          $(window.location.hash+'_anc').click();
+          $(window.location.hash+'_anc').scrollTop();
+        }
       }
     </script>
   </head>
