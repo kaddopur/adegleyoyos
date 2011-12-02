@@ -17,6 +17,7 @@
     
     <!-- Le styles -->
     <link rel="stylesheet" href="style/bootstrap.css">
+    <link rel="stylesheet" href="script/galleria/themes/classic/galleria.classic.css">
     <style type="text/css">
       body {
         padding-top: 40px;
@@ -24,11 +25,13 @@
       {% block style %}{% endblock %}
     </style>
     
-    
     <!-- Le javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script src="script/bootstrap-tabs.js"></script>
     <script src="script/bootstrap-modal.js"></script>
+    <script src="script/galleria/galleria-1.2.5.js"></script>
+    <script src="script/galleria/themes/classic/galleria.classic.min.js"></script>
+    
     <script>
       //create onDomReady Event
       window.onDomReady = DomReady;
@@ -73,6 +76,25 @@
           $(window.location.hash+'_anc').click();
           $(window.location.hash+'_anc').scrollTop();
         }
+      }
+      
+      function add_gallery(model, amount){
+        var data = [];
+        for(var i=1; i<=amount; i++){
+          var dic = {};
+          dic["image"] = "image/"+model+"/"+i+".jpg";
+          dic["thumb"] = "image/"+model+"/thumb/"+i+".jpg";
+          data.push(dic);
+        }
+        
+        $('#gallery_'+model).galleria({
+          data_source: data,
+          height: 370
+        });
+      }
+      
+      function clear_gallery(model){
+        $('#gallery_'+model).clear();
       }
     </script>
   </head>
