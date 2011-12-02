@@ -1,0 +1,71 @@
+﻿{% extends "base.html" %}
+
+{% block style %}
+  .man {
+    background-position: left top;
+    background-repeat: no-repeat;
+    height: 300px; 
+    background-size:contain;
+    -webkit-box-reflect: below 1px -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), color-stop(0.85, transparent), to(white)) 0 fill stretch stretch
+  }
+  
+  .wallpaper {
+    max-height: 180px;
+    margin: 0 5px 15px 0;
+    border-radius: 5px;
+  }
+  
+{% endblock %}
+
+    
+{% block content %}
+<ul class="pills" data-tabs="tabs">
+  <li class="active"><a href="#wallpaper"><span id="wallpaper_anc">Wallpaper</span></a></li>
+  <!--<li><a href="#app"><span id="app_anc">App</span></a></li>-->
+  <li><a href="#mod"><span id="mod_anc">Mod</span></a></li>
+</ul>
+
+<div id="my-tab-content" class="tab-content">
+  <div class="active tab-pane" id="wallpaper">
+    <div class="row">
+      <div class="span5">
+        <div class="man" style="background-image: url(image/cam.jpg);"></div>
+        <h4 style="margin-top: 20px;">攝影師 Chiu Shun-Yi</h4>
+        <p>
+          在2011年與<b>Adegleyoyos 裕和商店</b>負責人相識，發現到溜溜球其實不僅只是玩具，希望可以替溜溜球呈現出一些新的風貌，同樣是身為創意工作者的我們在經過多次的腦力激盪後，
+          開始與外拍model合作進行了一連串的企劃，共同為溜溜球玩家們打造出全新的視覺享受與風格。
+          並且也希望這些企劃能夠成為更多從未接觸過溜溜球的朋友們喜歡上這項運動的契機。
+        </p>
+
+        <p>在2011年這一年中有一些初步的成果，期待在未來的路上能夠繼續帶給大家溜溜球的各種風貌，並感謝這一年來團隊裡所有人的努力與貢獻，謝謝。</p>
+        
+      </div><!--author-->
+      
+      <div class="span10 offset1">
+        <h3>psg</h3>
+        <hr />
+        <a href="image/wallpaper/1a.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/1a.jpg"></a>
+        <a href="image/wallpaper/1b.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/1b.jpg"></a>
+        <a href="image/wallpaper/2a.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/2a.jpg"></a>
+        <a href="image/wallpaper/2b.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/2b.jpg"></a>
+        <a href="image/wallpaper/3a.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/3a.jpg"></a>
+        <a href="image/wallpaper/3b.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/3b.jpg"></a>
+        <a href="image/wallpaper/4a.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/4a.jpg"></a>
+        <a href="image/wallpaper/4b.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/4b.jpg"></a>
+        <a href="image/wallpaper/5a.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/5a.jpg"></a>
+        <a href="image/wallpaper/5b.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/5b.jpg"></a>
+      </div><!--authur-->
+    </div>
+  </div><!--wallpaper-->
+  
+  <!--
+  <div class="tab-pane" id="app">
+    <p>appappappappappappappappappappappappappappappappappapp</p>
+  </div><!--app-->
+  
+  
+  <div class="tab-pane" id="mod">
+    <p>modmodmodmodmodmodmodmodmodmodmodmodmodmodmodmodmodmod</p>
+  </div><!--mod-->
+</div>
+{% endblock %}

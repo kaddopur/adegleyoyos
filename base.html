@@ -58,16 +58,15 @@
 
       //do on ready
       function onReady() {
-        var target = {{ target }} ;
-        target = target[0];
-        
+        // nav bar activation
+        var target = window.location.pathname.substring(1);
+        if(target == ''){
+          target = 'index';
+          document.getElementById("link_logo").setAttribute("href", "#");
+        }
         var root = document.getElementById('link_'+target)
         root.setAttribute("class", "active");
         root.firstChild.setAttribute("href", "#");
-        
-        if(target == 'index'){
-          document.getElementById("link_logo").setAttribute("href", "#");
-        }
         
         // make anchor alive (to be refine)
         if(window.location.pathname == "/product"){
@@ -88,6 +87,7 @@
           <ul class="nav">
             <li id="link_index"><a href="/">主頁</a></li>
             <li id="link_product"><a href="/product">產品介紹</a></li>
+            <li id="link_download"><a href="/download">相關下載</a></li>
             <!--<li id="link_tutorial"><a href="#">線上教學</a></li>-->
             <!--<li id="link_commu"><a href="#">溜溜球社群</a></li>-->
             <li id="link_about"><a href="/about">關於我們</a></li>

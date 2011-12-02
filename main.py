@@ -21,21 +21,29 @@ class MainPage(webapp.RequestHandler):
     
 class AboutPage(webapp.RequestHandler):
   def get(self):
-    template_values = {'target': ['about']}
+    template_values = {}
     path = os.path.join(os.path.dirname(__file__), 'about.html')
     self.response.out.write(template.render(path, template_values))
     
     
 class ProductPage(webapp.RequestHandler):
   def get(self):
-    template_values = {'target': ['product']}
+    template_values = {}
     path = os.path.join(os.path.dirname(__file__), 'product.html')
+    self.response.out.write(template.render(path, template_values))
+    
+
+class DownloadPage(webapp.RequestHandler):
+  def get(self):
+    template_values = {}
+    path = os.path.join(os.path.dirname(__file__), 'download.html')
     self.response.out.write(template.render(path, template_values))
     
 
 application = webapp.WSGIApplication([('/', MainPage),
                                       ('/about', AboutPage),
-                                      ('/product', ProductPage)],
+                                      ('/product', ProductPage),
+                                      ('/download', DownloadPage)],
                                      debug=True)
 
 def main():
