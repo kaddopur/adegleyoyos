@@ -67,6 +67,19 @@
     color: white;
   }
   
+  .modal-backdrop {
+    width: 100%;
+  }
+  
+  .modal {
+    width: 940px;
+    margin: -240px 0 0 -470px;
+  }
+  
+  .modal.fade.in {
+    top: 40%;
+  }
+  
   
 {% endblock %}
 
@@ -129,7 +142,7 @@
       <div class="span8">
         <h2>圖片集</h2>
         
-        <div id="modal_psg" class="modal hide fade">
+        <div id="modal_psg" class="modal hide fade" >
           <div class="modal-header">
             <a href="#" class="close" onclick="clear_gallery('psg')">&times;</a>
             <h3>psg 圖片集</h3>
