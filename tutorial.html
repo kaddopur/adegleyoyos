@@ -1,0 +1,146 @@
+﻿{% extends "base.html" %}
+
+{% block style %}
+  .man {
+    background-position: left top;
+    background-repeat: no-repeat;
+    height: 300px; 
+    background-size:contain;
+    -webkit-box-reflect: below 1px -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), color-stop(0.85, transparent), to(white)) 0 fill stretch stretch
+  }
+  
+  .wallpaper {
+    max-height: 180px;
+    margin: 0 5px 15px 0;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 5px #aaa;
+  }
+  
+  .tile {
+    width: 150px;
+    margin: 0 auto 0;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 5px #aaa;
+  }
+  
+  .icon {
+    -webkit-box-shadow: 1px 1px 2px #aaa;
+    border: 1px solid #ccc; 
+    border-radius: 2px;
+  }
+  
+  .episode {
+    padding: 0;
+    margin: 0 0 40px 0;
+  }
+  
+  h6 {
+    margin: -12px 0 0;
+    text-transform: capitalize;
+  }
+  
+{% endblock %}
+
+    
+{% block content %}
+<ul class="pills" data-tabs="tabs">
+  <li class="active"><a href="#preface"><span id="preface_anc">基礎教學</span></a></li>
+  <!--
+  <li><a href="#beginner"><span id="beginner_anc">入門玩家</span></a></li>
+  <li><a href="#junior"><span id="junior_anc">初學玩家</span></a></li>
+  <li><a href="#primary"><span id="primary_anc">初級玩家</span></a></li>
+  <li><a href="#1a"><span id="1a_anc">進階玩家</span></a></li>
+  -->
+</ul>
+
+<div id="my-tab-content" class="tab-content">
+  <div class="active tab-pane" id="preface">
+    <div class="row">
+      <div class="span10 episode">
+        <iframe width="560" height="315" src="http://www.youtube.com/embed/DgzLOZ7mVUM" frameborder="0" allowfullscreen></iframe>
+      </div><!--video-->
+      <div class="span6">
+        <hgroup>
+          <h2>溜溜球繩的安裝</h2>
+          <h6>installation</h6>
+        </hgroup>
+        <p>
+        
+        </p>
+      </div><!--script-->
+    </div><!--episode-->
+    
+    <div class="row">
+      <div class="span10 episode">
+        <iframe width="560" height="315" src="http://www.youtube.com/embed/Xvt8LqNn3SI" frameborder="0" allowfullscreen></iframe>
+      </div><!--video-->
+      <div class="span6">
+        <hgroup>
+          <h2>溜溜球繩的安裝</h2>
+          <h6>wind up & holding</h6>
+        </hgroup>
+        <p>
+          
+        </p>
+      </div><!--script-->
+    </div><!--episode-->
+  </div><!--preface-->
+  
+  <div class="tab-pane" id="beginner">
+    <div class="row">
+      <div class="span10 episode">
+        <iframe width="560" height="315" src="http://www.youtube.com/embed/e82VE8UtW8A" frameborder="0" allowfullscreen></iframe>
+      </div><!--video-->
+      <div class="span6">
+        <h2>上線</h2>
+        <p>
+          beginnerbeginnerbeginnerbeginnerbeginnerbeginnerbeginnerbeginnerbeginnerbeginnerbeginner
+        </p>
+      </div><!--script-->
+    </div><!--episode-->
+  </div><!--beginner-->
+  
+  <div class="tab-pane" id="junior">
+    <div class="row">
+      <div class="span10 episode">
+        <iframe width="560" height="315" src="http://www.youtube.com/embed/e82VE8UtW8A" frameborder="0" allowfullscreen></iframe>
+      </div><!--video-->
+      <div class="span6">
+        <h2>上線</h2>
+        <p>
+          juniorjuniorjuniorjuniorjuniorjuniorjuniorjuniorjuniorjuniorjuniorjuniorjunior
+        </p>
+      </div><!--script-->
+    </div><!--episode-->
+  </div><!--junior-->
+  
+  <div class="tab-pane" id="primary">
+    <div class="row">
+      <div class="span10 episode">
+        <iframe width="560" height="315" src="http://www.youtube.com/embed/e82VE8UtW8A" frameborder="0" allowfullscreen></iframe>
+      </div><!--video-->
+      <div class="span6">
+        <h2>上線</h2>
+        <p>
+          primaryprimaryprimaryprimaryprimaryprimaryprimaryprimaryprimaryprimaryprimaryprimaryprimary
+        </p>
+      </div><!--script-->
+    </div><!--episode-->
+  </div><!--primary-->
+  
+  <div class="tab-pane" id="1a">
+    <div class="row">
+      <div class="span10 episode">
+        <iframe width="560" height="315" src="http://www.youtube.com/embed/e82VE8UtW8A" frameborder="0" allowfullscreen></iframe>
+      </div><!--video-->
+      <div class="span6">
+        <h2>上線</h2>
+        <p>
+          1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a
+        </p>
+      </div><!--script-->
+    </div><!--episode-->
+  </div><!--1a-->
+ 
+</div>
+{% endblock %}

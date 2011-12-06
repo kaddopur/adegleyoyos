@@ -40,10 +40,18 @@ class DownloadPage(webapp.RequestHandler):
     self.response.out.write(template.render(path, template_values))
     
 
+class TutorialPage(webapp.RequestHandler):
+  def get(self):
+    template_values = {}
+    path = os.path.join(os.path.dirname(__file__), 'tutorial.html')
+    self.response.out.write(template.render(path, template_values))
+    
+
 application = webapp.WSGIApplication([('/', MainPage),
                                       ('/about', AboutPage),
                                       ('/product', ProductPage),
-                                      ('/download', DownloadPage)],
+                                      ('/download', DownloadPage),
+                                      ('/tutorial', TutorialPage)],
                                      debug=True)
 
 def main():
