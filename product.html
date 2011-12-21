@@ -80,7 +80,23 @@
     top: 40%;
   }
   
+  .fb_like{
+    margin: 0 0 20px;
+  }
   
+  
+{% endblock %}
+
+
+{% block facebook %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 {% endblock %}
 
     
@@ -106,6 +122,13 @@
         <br />
       </p>
     </div>
+    
+    <div class="row">
+      <div class="span16 fb_like">
+        <div class="fb-like" data-href="http://www.adegle.com/product#psg" data-send="false" data-width="450" data-show-faces="false"></div>
+      </div>
+    </div>
+    
     <div class="row">
       <div class="span4">
         <h2>規格</h2>
@@ -174,6 +197,12 @@
     </div>
     
     <div class="row">
+      <div class="span16 fb_like">
+        <div class="fb-like" data-href="http://www.adegle.com/product#comet" data-send="false" data-width="450" data-show-faces="false"></div>
+      </div>
+    </div>
+    
+    <div class="row">
       <div class="span4">
         <h2>規格</h2>
         <dl>
@@ -230,7 +259,7 @@
   </div><!--comet-->
   
   <div class="tab-pane" id="glaze">
-    <div class="hero-unit cover" style="background-image: url(image/glaze/cover.png);">
+    <div class="hero-unit" style="background-image: url(image/glaze/cover.png);">
       <h1>Glaze</h1>
       <p>
         優雅精細的古典花紋設計，一眼難忘<br />
@@ -238,6 +267,12 @@
         <br />
         <br />
       </p>
+    </div>
+    
+    <div class="row">
+      <div class="span16 fb_like">
+        <div class="fb-like" data-href="http://www.adegle.com/product#glaze" data-send="false" data-width="450" data-show-faces="false"></div>
+      </div>
     </div>
     
     <div class="row">
