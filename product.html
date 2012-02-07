@@ -118,7 +118,8 @@
     
 {% block content %}
 <ul class="pills" data-tabs="tabs">
-  <li class="active"><a href="#psg"><span id="psg_anc">PSG</span></a></li>
+  <li class="active"><a href="#roc"><span id="roc_anc">Roc</span></a></li>
+  <li><a href="#psg"><span id="psg_anc">PSG</span></a></li>
   <li><a href="#comet"><span id="comet_anc">Comet</span></a></li>
   <li><a href="#glaze"><span id="glaze_anc">Glaze</span></a></li>
   <!--<li><a href="#rhongto">RhongTo</a></li>-->
@@ -128,9 +129,102 @@
 </ul>
 
 <div id="my-tab-content" class="tab-content">
-  <div class="active tab-pane" id="psg">
+  <div class="active tab-pane" id="roc">
+    <div class="hero-unit" style="background-image: url(image/roc/cover.png);">
+      <h1>ROC全新推出</h1>
+      <p>
+        挑戰全新溜溜球玩法<br />
+        全身雪白的大鵬將要展翅高飛<br />
+        <br />
+        <br />
+      </p>
+    </div>
+    
+    <div class="row">
+      <div class="span16 fb_like">
+        <div class="fb-like" data-href="http://www.adegle.com/product#roc" data-send="false" data-width="450" data-show-faces="false"></div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="span4">
+        <h2>規格</h2>
+        <dl>
+          <dt>Shape</dt>
+          <dd>Sandglass</dd>
+          
+          <dt>Weight</dt>
+          <dd>82.8 g</dd>
+          
+          <dt>Width</dt>
+          <dd>51.2 ~ 52.2 mm</dd>
+          
+          <dt>Effective Width</dt>
+          <dd>47.2 ~ 48.2 mm</dd>
+          
+          <dt>Diameter</dt>
+          <dd>77.0 mm</dd>
+          
+          <dt>Gap Width</dt>
+          <dd>2.2 ~ 3.2 mm</dd>
+          
+          <dt>Bearing Size</dt>
+          <dd>Half C Bearing</dd>
+          
+          <dt>Gap Type</dt>
+          <dd>Spacer</dd>
+          
+          <dt>Stock Response System</dt>
+          <dd>Silicone (thickness 1 mm)</dd>
+        </dl>
+        
+        <div id="modal_roc" class="modal hide fade" >
+          <div class="modal-header">
+            <a href="#" class="close" onclick="clear_gallery('roc')">&times;</a>
+            <h3>Roc 圖片集</h3>
+          </div>
+          <div class="modal-body" id="gallery_roc"></div>
+        </div>
+        <button data-controls-modal="modal_roc" data-backdrop="true" data-keyboard="true" class="btn primary" onclick="add_gallery('roc', 14);">更多圖片 &raquo;</button> 
+      </div>
+      
+      <div class="span12" style="background-image: url(image/roc/feature/all.png); height: 1200;">
+        <div style="position: relative; top: 120; left: 150">
+          <div class="feature_title">更可靠的軸心設計</div>
+          <div class="feature_content">
+            使用較粗的不鏽鋼軸心<br />
+            金屬製的墊片及軸心座使溜溜球更加耐用<br />
+            不鏽鋼軸承免去生鏽的煩惱<br />
+            軸心所有的零件就算損壞或遺失<br />
+            還是能夠購買專用零件進行更換
+          </div>
+        </div>
+        
+        <div style="position: relative; top: 450; left: 80">
+          <div class="feature_title">交換式墊片設計</div>
+          <div class="feature_content">
+            可輕易鎖定您喜愛的球體寬度<br />
+            切換成寬軸承切換成線上玩法時<br />
+            超級寬大的線上玩法溜溜球絕對是眾人目光的焦點
+          </div>
+        </div>
+        
+        <div style="position: relative; top: 750; left: 260">
+          <div class="feature_title">CNC一體成形的耐衝擊工程塑膠</div>
+          <div class="feature_content">
+            由電腦數位控制一體成形的高精度溜溜球<br />
+            使溜溜球性能更穩定及強勁<br />
+            讓溜溜球更不易變形、更加耐用
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div><!--roc-->
+  
+  <div class="tab-pane" id="psg">
     <div class="hero-unit" style="background-image: url(image/psg/cover.png);">
-      <h1>PSG全新推出</h1>
+      <h1>PSG</h1>
       <p>
         鮮豔繽紛的配色大膽的展現玩心<br />
         最適合初次接觸溜溜球的你<br />
@@ -219,14 +313,7 @@
             精心調整的重量適合各階段的玩家
           </div>
         </div>
-      </div><!--psg-->
-      
-      <!--
-      <div class="span4">
-        <h2>商店</h2>
-        <a href="http://class.ruten.com.tw/user/index00.php?s=wingstyle" target="_blank"><img class="vender" src="image/vender/ruten.png"></a>
       </div>
-      -->
     </div>
   </div><!--psg-->
   
@@ -291,17 +378,8 @@
       </div>
     
       <div class="span12">
-        <h2>圖片集</h2><!--Comet-->
-        
         
       </div>
-      
-      <!--
-      <div class="span4">
-        <h2>商店</h2>
-        <a href="http://yoyoz.co.uk/" target="_blank"><img class="vender" src="image/vender/yoyoz.png"></a>
-      </div>
-      -->
     </div>
   </div><!--comet-->
   
@@ -366,17 +444,8 @@
       </div>
     
       <div class="span12">
-        <h2>圖片集</h2><!--Glaze-->
-        
         
       </div>
-      
-      <!--
-      <div class="span4">
-        <h2>商店</h2>
-        <a href="http://www.rakuten.ne.jp/gold/yo-yo/" target="_blank"><img class="vender" src="image/vender/spingear.png"></a>
-      </div>
-      -->
     </div>
   </div><!--glaze-->
   
