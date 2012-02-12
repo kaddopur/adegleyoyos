@@ -99,6 +99,9 @@
         
       <a href="http://thegioiyoyo.com/" target="_blank" title="TheGioiYoyo">
         <div class="vender" style="background-image: url(image/vender/thegioiyoyo.png);"></div></a>
+        
+      <a href="http://www.yo-station.com/" target="_blank" title="YO-STATION">
+        <div class="vender" style="background-image: url(image/vender/yostation.png);"></div></a>  
       
       <a href="https://www.facebook.com/YoyoCorner" target="_blank" title="YoyoCorner">
         <div class="vender" style="background-image: url(image/vender/yoyocorner.png);"></div></a>
@@ -136,7 +139,46 @@
         
       <a href="http://yoyoz.co.uk/" target="_blank" title="YoyoZ">
         <div class="vender" style="background-image: url(image/vender/yoyoz.png);"></div></a>
-   
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="span16 sticker_title">
+      <h3>世界分布</h3>
+    </div>
+    
+    <div class="span16">
+      <div id='chart_div'></div>
+      <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+      <script type='text/javascript'>
+       google.load('visualization', '1', {'packages': ['geochart']});
+       google.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Country');
+          data.addColumn('string', 'Partner')
+          data.addRows([
+            ['CN', 'Central Bearing Co.'],
+            ['TW', 'HIYA, Ruten'],
+            ['PH', 'Kitty String'],
+            ['ID', 'Ozhiriz, yoyocorner'],
+            ['JP', 'REWIND, SpinGear'],
+            ['SG', 'spinworkx'],
+            ['VN', 'TheGioiYoyo'],
+            ['HK', 'YO-STATION'],
+            ['TH', 'yoyo Thailand'],
+            ['US', 'yoyobestbuy, YOYOEXPERT, yoyonation'],
+            ['HU', 'yoyoraven'],
+            ['GB', 'YoYoZ']
+          ]);
+
+          var options = {'width': 940,
+                         'height': 586};
+          var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+          chart.draw(data, options);
+      };
+      </script>
     </div>
   </div>
 </div>
