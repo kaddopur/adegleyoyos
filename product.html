@@ -118,7 +118,8 @@
     
 {% block content %}
 <ul class="pills" data-tabs="tabs">
-  <li class="active"><a href="#roc"><span id="roc_anc">Roc</span></a></li>
+  <li class="active"><a href="#asteroid"><span id="asteroid_anc">Asteroid</span></a></li>
+  <li><a href="#roc"><span id="roc_anc">Roc</span></a></li>
   <li><a href="#psg"><span id="psg_anc">PSG</span></a></li>
   <li><a href="#comet"><span id="comet_anc">Comet</span></a></li>
   <li><a href="#glaze"><span id="glaze_anc">Glaze</span></a></li>
@@ -129,9 +130,91 @@
 </ul>
 
 <div id="my-tab-content" class="tab-content">
-  <div class="active tab-pane" id="roc">
+  <div class="active tab-pane" id="asteroid">
+    <div class="hero-unit" style="background-image: url(image/asteroid/cover.png);">
+      <h1>Asteroid降臨地球</h1>
+      <p>
+        裕和商店2012年最新作品全球同步上市<br />
+        全新手感等著你來嘗試<br />
+        <br />
+        <br />
+      </p>
+    </div>
+    
+    <div class="row">
+      <div class="span16 fb_like">
+        <div class="fb-like" data-href="http://www.adegle.com/product#asteroid" data-send="false" data-width="450" data-show-faces="false"></div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="span4">
+        <h2>規格</h2>
+        <dl>
+          <dt>Shape</dt>
+          <dd>Sandglass</dd>
+          
+          <dt>Weight</dt>
+          <dd>66.8 g</dd>
+          
+          <dt>Width</dt>
+          <dd>46.2 mm</dd>
+          
+          <dt>Effective Width</dt>
+          <dd>37.6 mm</dd>
+          
+          <dt>Diameter</dt>
+          <dd>57.0 mm</dd>
+          
+          <dt>Gap Width</dt>
+          <dd>4.2 mm</dd>
+          
+          <dt>Bearing Size</dt>
+          <dd>C Bearing</dd>
+          
+          <dt>Gap Type</dt>
+          <dd>Spacer</dd>
+          
+          <dt>Stock Response System</dt>
+          <dd>Silicone (thickness 1 mm)</dd>
+        </dl>
+        
+        <button data-controls-modal="modal_asteroid" data-backdrop="true" data-keyboard="true" class="btn primary" onclick="add_gallery('asteroid', 15);">更多圖片 &raquo;</button> 
+      </div>
+      
+      <div class="span12" style="background-image: url(image/asteroid/feature/all.png); height: 1100;">
+        <div style="position: relative; top: 120; left: 320">
+          <div class="feature_title">螢光色系</div>
+          <div class="feature_content">
+            鮮豔奪目的三式樣螢光色系球體<br />
+            不論何時何地都是眾人目光的焦點
+          </div>
+        </div>
+        
+        <div style="position: relative; top: 350; left: 100">
+          <div class="feature_title">内藏式金屬加重環</div>
+          <div class="feature_content">
+            特製的金屬零件可以有效提升性能<br />
+            讓你可以盡情展現你華麗的招式<br />
+            而不用擔心空轉時間
+          </div>
+        </div>
+        
+        <div style="position: relative; top: 600; left: 200">
+          <div class="feature_title">獨特的球體外型</div>
+          <div class="feature_content">
+            裕和商店獨家研發的球型<br />
+            帶來更順暢的斜向招式體驗<br />
+            也讓你一見傾心 愛不釋手
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--asteroid-->
+
+  <div class="tab-pane" id="roc">
     <div class="hero-unit" style="background-image: url(image/roc/cover.png);">
-      <h1>Roc全新推出</h1>
+      <h1>Roc</h1>
       <p>
         挑戰全新溜溜球玩法<br />
         全身雪白的大鵬將要展翅高飛<br />
@@ -436,10 +519,18 @@
 </div>
 
 <!-- gallery -->
+<div id="modal_asteroid" class="modal hide fade" >
+  <div class="modal-header">
+    <a href="#" class="close" onclick="clear_gallery('asteroid')">&times;</a>
+    <h3>Asteroid 圖片集</h3>
+  </div>
+  <div class="modal-body" id="gallery_asteroid"></div>
+</div>
+
 <div id="modal_roc" class="modal hide fade" >
   <div class="modal-header">
     <a href="#" class="close" onclick="clear_gallery('roc')">&times;</a>
-    <h3>Roc / Whale圖片集</h3>
+    <h3>Roc / Whale 圖片集</h3>
   </div>
   <div class="modal-body" id="gallery_roc"></div>
 </div>
