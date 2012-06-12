@@ -13,15 +13,16 @@ html(lang='zh-TW')
     link(rel='icon', href='/img/favicon.ico')
     link(rel='image_src', href='/img/logo_fb.png')
     
-    // style
+    // css
     link(rel='stylesheet', href='/css/bootstrap.min.css')
     link(type='text/css', href='http://fonts.googleapis.com/css?family=Ubuntu:400,700', rel='stylesheet') 
     link(rel='stylesheet', href='/css/base.css')
     block css
 
-    // javascript
+    // js
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
     script(src='/js/bootstrap.min.js')
+    script(src='/js/base.js')
     block js
 
   body
@@ -42,7 +43,18 @@ html(lang='zh-TW')
               a(href='/download') 相關下載
             li#link_about
               a(href='/about') 關於我們
+          ul.nav.pull-right
+            li#menu.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='menu')
+                | 其他語言
+                b.caret
+              ul.dropdown-menu
+                li 
+                  a#to_chinese(href='#') 中文
+                li
+                  a#to_english(href='#') English
 
+        
     #main.container
       block content
       footer

@@ -6,7 +6,10 @@ loadPartners = ->
           {name: 'LORI',                site: 'https://www.facebook.com/YOYOLORI',   logo: 'lori.png'},
           {name: 'ViViString',          site: 'https://www.facebook.com/ViViString', logo: 'vivistring.png'}]
   for p in coop
-    $('#cooperators').append("<a href='#{p.site}' title='#{p.name}' target='_blank'><div class='vender' style='background-image: url(#{"/img/vender/"+p.logo})'></div></a>")
+    $('#cooperators').append("
+      <a href='#{p.site}' title='#{p.name}' target='_blank'>
+        <div class='vender' style='background-image: url(#{"/img/vender/"+p.logo})'></div>
+      </a>")
 
 
   asia = [{name: '28SPIN',          site: 'http://www.28spin.com/v5/',                    logo: '28spin.png'},
@@ -20,7 +23,10 @@ loadPartners = ->
           {name: 'YoyoCorner',      site: 'https://www.facebook.com/YoyoCorner',          logo: 'yoyocorner.png'},
           {name: 'YoyoThailand',    site: 'http://www.yoyothailand.com/',                 logo: 'yoyothailand.png'}]
   for p in asia
-    $('#asia').append("<a href='#{p.site}' title='#{p.name}' target='_blank'><div class='vender' style='background-image: url(#{"/img/vender/"+p.logo})'></div></a>")
+    $('#asia').append("
+      <a href='#{p.site}' title='#{p.name}' target='_blank'>
+        <div class='vender' style='background-image: url(#{"/img/vender/"+p.logo})'></div>
+      </a>")
 
   
   america = [{name: 'YoYoBESTBUY.com', site: 'http://yoyobestbuy.com/',    logo: 'yoyobestbuy.png'},
@@ -28,7 +34,10 @@ loadPartners = ->
              {name: 'YoYoNation',      site: 'http://www.yoyonation.com/', logo: 'yoyonation.png'},
              {name: 'YOYOSAM',         site: 'http://www.yoyosam.com/',    logo: 'yoyosam.png'}]
   for p in america
-    $('#america').append("<a href='#{p.site}' title='#{p.name}' target='_blank'><div class='vender' style='background-image: url(#{"/img/vender/"+p.logo})'></div></a>")
+    $('#america').append("
+      <a href='#{p.site}' title='#{p.name}' target='_blank'>
+        <div class='vender' style='background-image: url(#{"/img/vender/"+p.logo})'></div>
+      </a>")
 
 
   europe = [{name: 'Euro-Yo',   site: 'http://www.euro-yo.com/',  logo: 'euroyo.png'},
@@ -37,9 +46,10 @@ loadPartners = ->
             {name: 'yoyoraven', site: 'http://yoyoraven.eu/',     logo: 'yoyoraven.png'},
             {name: 'YoyoZ',     site: 'http://yoyoz.co.uk/',      logo: 'yoyoz.png'}]
   for p in europe
-    $('#europe').append("<a href='#{p.site}' title='#{p.name}' target='_blank'><div class='vender' style='background-image: url(#{"/img/vender/"+p.logo})'></div></a>")
-
-
+    $('#europe').append("
+      <a href='#{p.site}' title='#{p.name}' target='_blank'>
+        <div class='vender' style='background-image: url(#{"/img/vender/"+p.logo})'></div>
+      </a>")
 
 
 $ ->
