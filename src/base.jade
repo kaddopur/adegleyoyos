@@ -1,0 +1,60 @@
+!!! 5
+
+html(lang='zh-TW')
+  head
+    title Adegleyoyos
+    
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    meta(name='author', content='Jason C. Huang')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='keywords', content='Adegle,Adegleyoyos,裕和商店,教學,臺灣,新竹互動式溜溜球協會,Taiwan,Hsinchu,yoyo,yo-yo,溜溜球,台灣,新竹,搖搖,悠悠球,悠悠,sport,新竹市立體育場')
+
+    link(rel='icon', href='/img/favicon.ico')
+    link(rel='image_src', href='/img/logo_fb.png')
+    
+    // style
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(type='text/css', href='http://fonts.googleapis.com/css?family=Ubuntu:400,700', rel='stylesheet') 
+    link(rel='stylesheet', href='/css/base.css')
+    block css
+
+    // javascript
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    script(src='/js/bootstrap.min.js')
+    block js
+
+  body
+    block facebook
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          a#link_logo.brand(href='/')
+            img(src='/img/logo.png')
+          ul.nav
+            li#link_index
+              a(href='/') 主頁
+            li#link_product
+              a(href='/product') 產品介紹
+            li#link_tutorial
+              a(href='/tutorial') 線上教學
+            li#link_download
+              a(href='/download') 相關下載
+            li#link_about
+              a(href='/about') 關於我們
+
+    #main.container
+      block content
+      footer
+        hr 
+        .row
+          .span3
+            p &copy; Adegleyoyos 2012
+          .span9
+            p#contact
+              | 黃麟凱 HUANG Lin-Kai
+              br 
+              | adegleyoyo [AT] gmail.com
+              br
+              | +886-919226396
+

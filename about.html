@@ -1,71 +1,113 @@
-﻿{% extends "base.html" %}
-
-{% block facebook %}
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-{% endblock %}
-
-
-{% block content %}
-<div class="row" style="padding: 30px 0 40px;">
-  <div class="span6">
-    <img src="image/portrait.jpg" style="border-radius: 5px; max-width: 100%;">
-  </div>
-  
-  <div class="span10">
-    <h1>關於我們</h1>
-    <p><strong>Adegleyoyos裕和商店</strong>於2008年2月正式在台灣新竹成立，一直以「研發高精度高品質的溜溜球產品、並將溜溜球運動推廣普及至全台灣」為經營理念，竭力促進台灣溜溜球運動社群的發展。</p>
-
-    <p><strong>裕和商店</strong>不斷收集各方溜溜球選手的使用經驗、檢討市面上各大廠牌溜溜球的優缺點，致力開發出精密、穩定、耐用的原創溜溜球。我們的產品深獲國內外選手的好評，並在國內外各大賽中均取得優異的名次。包括：2009台灣溜溜球大賽5A組第一名、2009台灣溜溜球大賽5A組第二名、2009印尼溜溜球大賽KYI第一名。我們的產品也成功外銷至日本經銷商SpinGear，新加坡經銷商 Spinworkx，為世界各地的溜溜球選手帶來更多更好的選擇。</p>
-
-    <p>此外，為了進一步提升國內溜溜球運動的發展，<strong>裕和商店</strong>於2008年起贊助台灣溜溜球協會TWYF (Taiwan Yo-yo Federation)舉辦每年一度的台灣溜溜球大賽TYYC (Taiwan Yo-yo Contest)，提供選手們切磋花式的舞台，以期提高台灣溜溜球的技術水準，讓台灣的溜溜球可以在世界的舞台上發光發熱。<strong>裕和商店</strong>並積極投入與地方性溜溜球團體的合作計畫，包括與新竹互動式溜溜球協會HIYA (Hsinchu Interactive Yo-yo Association)的長期合作，贊助器材及人力來維持每週的固定聚會、與全國最大的2A溜溜球聯賽2A GP合作，提供獎品來激發選手們的鬥志和潛力。</p>
-
-    <p>若需更進一步瞭解產品訊息，歡迎與<strong>裕和商店</strong>聯絡</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="span8">
-    <h2>facebook</h2>
-    <div class="fb-like-box" data-href="https://www.facebook.com/adegleyoyos" data-width="460" data-height="392" data-show-faces="true" data-stream="false" data-header="false" style="float: left;"></div>
-  </div>
-  
-  <div class="span8">
-    <h2>twitter</h2>
-    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <title>Adegleyoyos</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Jason C. Huang">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="Adegle,Adegleyoyos,裕和商店,教學,臺灣,新竹互動式溜溜球協會,Taiwan,Hsinchu,yoyo,yo-yo,溜溜球,台灣,新竹,搖搖,悠悠球,悠悠,sport,新竹市立體育場">
+    <link rel="icon" href="/img/favicon.ico">
+    <link rel="image_src" href="/img/logo_fb.png">
+    <!-- style-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/about.css">
+    <!-- javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id="fb-root"></div>
     <script>
-    new TWTR.Widget({
-      version: 2,
-      type: 'profile',
-      rpp: 10,
-      interval: 30000,
-      width: 'auto',
-      height: 300,
-      theme: {
-        shell: {
-          background: '#dddddd',
-          color: '#222222'
-        },
-        tweets: {
-          background: '#ffffff',
-          color: '#222222',
-          links: '#04c276'
-        }
-      },
-      features: {
-        scrollbar: true,
-        loop: false,
-        live: false,
-        behavior: 'all'
-      }
-    }).render().setUser('adegleyoyotw').start();
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      
     </script>
-  </div>
-</div>
-{% endblock %}
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a id="link_logo" href="/" class="brand"><img src="/img/logo.png"></a>
+          <ul class="nav">
+            <li id="link_index"><a href="/">主頁</a></li>
+            <li id="link_product"><a href="/product">產品介紹</a></li>
+            <li id="link_tutorial"><a href="/tutorial">線上教學</a></li>
+            <li id="link_download"><a href="/download">相關下載</a></li>
+            <li id="link_about"><a href="/about">關於我們</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="main" class="container">
+      <div id="main" class="row">
+        <div class="span5"><img src="img/portrait.jpg"></div>
+        <div class="span7">
+          <h1>關於我們 </h1>
+          <p><strong>Adegleyoyos裕和商店</strong>於2008年2月正式在台灣新竹成立，一直以「研發高精度高品質的溜溜球產品、並將溜溜球運動推廣普及至全台灣」為經營理念，竭力促進台灣溜溜球運動社群的發展。</p>
+          <p> <strong>裕和商店</strong>不斷收集各方溜溜球選手的使用經驗、檢討市面上各大廠牌溜溜球的優缺點，致力開發出精密、穩定、耐用的原創溜溜球。我們的產品深獲國內外選手的好評，並在國內外各大賽中均取得優異的名次。包括：2009台灣溜溜球大賽5A組第一名、2009台灣溜溜球大賽5A組第二名、2009印尼溜溜球大賽KYI第一名。我們的產品也成功外銷至日本經銷商SpinGear，新加坡經銷商 Spinworkx，為世界各地的溜溜球選手帶來更多更好的選擇。</p>
+          <p>
+             
+            此外，為了進一步提升國內溜溜球運動的發展，<strong>裕和商店</strong>於2008年起贊助台灣溜溜球協會TWYF (Taiwan Yo-yo Federation)舉辦每年一度的台灣溜溜球大賽TYYC (Taiwan Yo-yo Contest)，提供選手們切磋花式的舞台，以期提高台灣溜溜球的技術水準，讓台灣的溜溜球可以在世界的舞台上發光發熱。<strong>裕和商店</strong>並積極投入與地方性溜溜球團體的合作計畫，包括與新竹互動式溜溜球協會HIYA (Hsinchu Interactive Yo-yo Association)的長期合作，贊助器材及人力來維持每週的固定聚會、與全國最大的2A溜溜球聯賽2A GP合作，提供獎品來激發選手們的鬥志和潛力。
+          </p>
+          <p>
+             
+            若需更進一步瞭解產品訊息，歡迎與<strong>裕和商店</strong>聯絡
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span6">
+          <h2>facebook</h2>
+          <html><div class="fb-like-box" data-href="https://www.facebook.com/adegleyoyos" data-width="460" data-height="392" data-show-faces="true" data-stream="false" data-header="false" style="float: left;"></div></html>
+        </div>
+        <div class="span6">
+          <h2>twitter</h2>
+          <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+          <script>
+            new TWTR.Widget({
+              version: 2,
+              type: 'profile',
+              rpp: 10,
+              interval: 30000,
+              width: 'auto',
+              height: 300,
+              theme: {
+                shell: {
+                  background: '#dddddd',
+                  color: '#222222'
+                },
+                tweets: {
+                  background: '#ffffff',
+                  color: '#222222',
+                  links: '#04c276'
+                }
+              },
+              features: {
+                scrollbar: true,
+                loop: false,
+                live: false,
+                behavior: 'all'
+              }
+            }).render().setUser('adegleyoyotw').start();
+          </script>
+        </div>
+      </div>
+      <footer>
+        <hr>
+        <div class="row">
+          <div class="span3">
+            <p>&copy; Adegleyoyos 2012</p>
+          </div>
+          <div class="span9">
+            <p id="contact">黃麟凱 HUANG Lin-Kai<br>adegleyoyo [AT] gmail.com<br>+886-919226396</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

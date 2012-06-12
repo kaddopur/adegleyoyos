@@ -1,104 +1,91 @@
-﻿{% extends "base.html" %}
-
-{% block style %}
-  .man {
-    background-position: left top;
-    background-repeat: no-repeat;
-    height: 300px; 
-    background-size:contain;
-    -webkit-box-reflect: below 1px -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), color-stop(0.85, transparent), to(white)) 0 fill stretch stretch
-  }
-  
-  .wallpaper {
-    max-height: 180px;
-    margin: 0 5px 15px 0;
-    border-radius: 5px;
-    -webkit-box-shadow: 2px 2px 5px #aaa;
-  }
-  
-  .tile {
-    width: 150px;
-    margin: 0 auto 0;
-    border-radius: 5px;
-    -webkit-box-shadow: 2px 2px 5px #aaa;
-  }
-  
-  .icon {
-    -webkit-box-shadow: 1px 1px 2px #aaa;
-    border: 1px solid #ccc; 
-    border-radius: 2px;
-  }
-  
-{% endblock %}
-
-    
-{% block content %}
-<ul class="pills" data-tabs="tabs">
-  <li class="active"><a href="#wallpaper"><span id="wallpaper_anc">桌布</span></a></li>
-  <!--<li><a href="#app"><span id="app_anc">App</span></a></li>-->
-  <li><a href="#mod"><span id="mod_anc">模版</span></a></li>
-</ul>
-
-<div id="my-tab-content" class="tab-content">
-  <div class="active tab-pane" id="wallpaper">
-    <div class="row">
-      <div class="span5">
-        <div class="man" style="background-image: url(image/cam.jpg);"></div>
-        <h4 style="margin-top: 20px;">攝影師 Chiu Shun-Yi　
-        <a href="https://www.facebook.com/profile.php?id=100001215134014&sk=photos" target="_blank"><img class="icon" src="image/fb.png"></a>
-        <a href="http://www.flickr.com/photos/adegle/" target="_blank"><img class="icon" src="image/flickr.png"></a>
-        <a href="http://goods.ruten.com.tw/item/show?21112027213079" target="_blank"><img class="icon" src="image/ruten.png"></a>
-        </h4>
-        <p>
-          在2011年與<b>Adegleyoyos 裕和商店</b>負責人相識，發現到溜溜球其實不僅只是玩具，希望可以替溜溜球呈現出一些新的風貌，同樣是身為創意工作者的我們在經過多次的腦力激盪後，
-          開始與外拍model合作進行了一連串的企劃，共同為溜溜球玩家們打造出全新的視覺享受與風格。
-          並且也希望這些企劃能夠成為更多從未接觸過溜溜球的朋友們喜歡上這項運動的契機。
-        </p>
-
-        <p>在2011年這一年中有一些初步的成果，期待在未來的路上能夠繼續帶給大家溜溜球的各種風貌，並感謝這一年來團隊裡所有人的努力與貢獻，謝謝。</p>
-        
-      </div><!--author-->
-      
-      <div class="span10 offset1">
-        <h3>psg</h3>
-        <hr />
-        <a href="image/wallpaper/1a.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/thumb/1a.jpg"></a>
-        <a href="image/wallpaper/1b.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/thumb/1b.jpg"></a>
-        <a href="image/wallpaper/2a.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/thumb/2a.jpg"></a>
-        <a href="image/wallpaper/2b.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/thumb/2b.jpg"></a>
-        <a href="image/wallpaper/3a.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/thumb/3a.jpg"></a>
-        <a href="image/wallpaper/3b.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/thumb/3b.jpg"></a>
-        <a href="image/wallpaper/4a.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/thumb/4a.jpg"></a>
-        <a href="image/wallpaper/4b.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/thumb/4b.jpg"></a>
-        <a href="image/wallpaper/5a.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/thumb/5a.jpg"></a>
-        <a href="image/wallpaper/5b.jpg" target="_blank"><img class="wallpaper" src="image/wallpaper/thumb/5b.jpg"></a>
-      </div><!--authur-->
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <title>Adegleyoyos</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Jason C. Huang">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="Adegle,Adegleyoyos,裕和商店,教學,臺灣,新竹互動式溜溜球協會,Taiwan,Hsinchu,yoyo,yo-yo,溜溜球,台灣,新竹,搖搖,悠悠球,悠悠,sport,新竹市立體育場">
+    <link rel="icon" href="/img/favicon.ico">
+    <link rel="image_src" href="/img/logo_fb.png">
+    <!-- style-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/download.css">
+    <!-- javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/download.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a id="link_logo" href="/" class="brand"><img src="/img/logo.png"></a>
+          <ul class="nav">
+            <li id="link_index"><a href="/">主頁</a></li>
+            <li id="link_product"><a href="/product">產品介紹</a></li>
+            <li id="link_tutorial"><a href="/tutorial">線上教學</a></li>
+            <li id="link_download"><a href="/download">相關下載</a></li>
+            <li id="link_about"><a href="/about">關於我們</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div><!--wallpaper-->
-  
-  <!--
-  <div class="tab-pane" id="app">
-    <p>appappappappappappappappappappappappappappappappappapp</p>
-  </div><!--app-->
-  
-  
-  <div class="tab-pane" id="mod">
-    <div class="row">
-        <div class="span4">
-          <h4>使用方法</h4>
-          <ol>
-            <li>下載的pdf檔後不縮放大小列印</li>
-            <li>將模版沿紅線裁切下來，並固定在貼紙上(例: 卡典希德)</li>
-            <li>依照圖型裁切貼紙</li>
-            <li>將貼紙依示意圖黏貼於球體</li>
-          </ol>
-       </div>
-    
-        <div class="span4">
-          <h4>psg裝飾用貼紙模版</h4>
-          <a href="image/mod/psg_sticker_mod.pdf" target="_blank"><img class="tile" src="image/mod/psg_sticker_mod.png"></a>
-       </div>
+    <div id="main" class="container">
+      <div class="tabbable">
+        <ul class="nav nav-pills">
+          <li class="active"><a href="#wallpaper" data-toggle="tab"><span id="wallpaper_anc">桌布</span></a></li><!--li<a href="#app" data-toggle="tab"><span id="app_anc">App</span></a>-->
+          <li><a href="#mod" data-toggle="tab"><span id="mod_anc">模版</span></a></li>
+        </ul>
+        <div class="tab-content">
+          <div id="wallpaper" class="tab-pane active">
+            <div class="row">
+              <div class="span3">
+                <div class="man"></div>
+                <h3>攝影師 CHIU Shun-Yi</h3>
+                <p><a href="https://www.facebook.com/profile.php?id=100001215134014&amp;sk=photos" target="_blank"><img src="img/fb.png" class="icon"></a><a href="http://www.flickr.com/photos/adegle/" target="_blank"><img src="img/flickr.png" class="icon"></a><a href="http://goods.ruten.com.tw/item/show?21112027213079" target="_blank"><img src="img/ruten.png" class="icon"></a></p>
+                <p>在2011年與<strong>Adegleyoyos 裕和商店</strong>負責人相識，發現到溜溜球其實不僅只是玩具，希望可以替溜溜球呈現出一些新的風貌，同樣是身為創意工作者的我們在經過多次的腦力激盪後，開始與外拍model合作進行了一連串的企劃，共同為溜溜球玩家們打造出全新的視覺享受與風格。並且也希望這些企劃能夠成為更多從未接觸過溜溜球的朋友們喜歡上這項運動的契機。</p>
+                <P>在2011年這一年中有一些初步的成果，期待在未來的路上能夠繼續帶給大家溜溜球的各種風貌，並感謝這一年來團隊裡所有人的努力與貢獻，謝謝。</P>
+              </div>
+              <div class="span8 offset1">
+                <div id="psg">
+                  <h3>psg</h3>
+                  <hr>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="mod" class="tab-pane">
+            <div class="row">
+              <div class="span3">
+                <h3>使用方法</h3>
+                <ol>
+                  <li>下載的pdf檔後不縮放大小列印</li>
+                  <li>將模版沿紅線裁切下來，並固定在貼紙上(例: 卡典希德)</li>
+                  <li>依照圖型裁切貼紙</li>
+                  <li>將貼紙依示意圖黏貼於球體</li>
+                </ol>
+              </div>
+              <div class="span3">
+                <h3>psg裝飾用貼紙模版</h3><a href="/img/mod/psg_sticker_mod.pdf" target="_blank"><img src="img/mod/psg_sticker_mod.png" class="tile"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <hr>
+        <div class="row">
+          <div class="span3">
+            <p>&copy; Adegleyoyos 2012</p>
+          </div>
+          <div class="span9">
+            <p id="contact">黃麟凱 HUANG Lin-Kai<br>adegleyoyo [AT] gmail.com<br>+886-919226396</p>
+          </div>
+        </div>
+      </footer>
     </div>
-  </div><!--mod-->
-</div>
-{% endblock %}
+  </body>
+</html>

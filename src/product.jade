@@ -1,0 +1,304 @@
+extends base
+
+block css
+  link(rel='stylesheet', href='/css/product.css')
+
+block js
+  script(src='/js/product.js')
+
+block content
+  .tabbable
+    ul.nav.nav-pills
+      li.active
+        a(href='#asteroid', data-toggle='tab') Asteroid
+      li
+        a(href='#roc', data-toggle='tab') Roc
+      li
+        a(href='#psg', data-toggle='tab') PSG
+      li
+        a(href='#comet', data-toggle='tab') Comet
+      li
+        a(href='#glaze', data-toggle='tab') Glaze
+    .tab-content
+      #asteroid.tab-pane.active
+        #asteroid_banner.hero-unit
+          h1 Asteroid降臨地球
+          p
+            | 裕和商店2012年最新作品全球同步上市
+            br 
+            | 全新手感等著你來嘗試
+        .row
+          .span3
+            h2 規格
+            dl
+              dt Shape
+              dd Sandglass
+              
+              dt Weight
+              dd 66.8 g
+              
+              dt Width
+              dd 46.2 mm
+              
+              dt Effective Width
+              dd 37.6 mm
+              
+              dt Diameter
+              dd 57.0 mm
+              
+              dt Gap Width
+              dd 4.2 mm
+              
+              dt Bearing Size
+              dd C Bearing
+              
+              dt Gap Type
+              dd Spacer
+              
+              dt Stock Response System
+              dd Silicone (thickness 1 mm)
+            a(href='https://www.facebook.com/media/set/?set=a.10151005674732744.481596.293113882743&type=3')
+              .btn.btn-primary 更多圖片 &raquo;
+          #asteroid_feature.span9
+            div
+              .feature_title 螢光色系
+              .feature_content
+                | 鮮豔奪目的三式樣螢光色系球體
+                br
+                | 不論何時何地都是眾人目光的焦點
+            div
+              .feature_title 内藏式金屬加重環
+              .feature_content
+                | 特製的金屬零件可以有效提升性能
+                br
+                | 讓你可以盡情展現你華麗的招式
+                br
+                | 而不用擔心空轉時間
+            div
+              .feature_title 獨特的球體外型
+              .feature_content
+                | 裕和商店獨家研發的球型
+                br
+                | 帶來更順暢的斜向招式體驗
+                br
+                | 也讓你一見傾心 愛不釋手
+      #roc.tab-pane
+        #roc_banner.hero-unit
+          h1 Roc
+          p
+            | 挑戰全新溜溜球玩法
+            br
+            | 全身雪白的大鵬將要展翅高飛
+        .row
+          .span3
+            h2 規格
+            dl
+              dt Shape
+              dd Sandglass
+              
+              dt Weight
+              dd 82.8 g
+
+              dt Width
+              dd 51.2 ~ 52.2 mm
+
+              dt Effective Width
+              dd 47.2 ~ 48.2 mm
+
+              dt Diameter
+              dd 77.0 mm
+
+              dt Gap Width
+              dd 2.2 ~ 3.2 mm
+
+              dt Bearing Size
+              dd Half C Bearing
+
+              dt Gap Type
+              dd Spacer
+
+              dt Stock Response System
+              dd Silicone (thickness 1 mm)
+            a(href='https://www.facebook.com/media/set/?set=a.10151005669512744.481595.293113882743&type=3')
+              .btn.btn-primary 更多圖片 &raquo;
+          #roc_feature.span9
+            div
+              .feature_title 更可靠的軸心設計
+              .feature_content
+                | 使用較粗的不鏽鋼軸心
+                br
+                | 金屬製的墊片及軸心座使溜溜球更加耐用
+                br
+                | 不鏽鋼軸承免去生鏽的煩惱
+                br
+                | 軸心所有的零件就算損壞或遺失
+                br
+                | 還是能夠購買專用零件進行更換
+            div
+              .feature_title 交換式墊片設計
+              .feature_content
+                | 可輕易鎖定您喜愛的球體寬度
+                br
+                | 切換成寬軸承切換成線上玩法時
+                br
+                | 超級寬大的線上玩法溜溜球絕對是眾人目光的焦點
+            div
+              .feature_title CNC一體成形的耐衝擊工程塑膠
+              .feature_content
+                | 由電腦數位控制一體成形的高精度溜溜球
+                br
+                | 使溜溜球性能更穩定及強勁
+                br
+                | 讓溜溜球更不易變形、更加耐用
+      #psg.tab-pane
+        #psg_banner.hero-unit
+          h1 PSG
+          p
+            | 鮮豔繽紛的配色大膽的展現玩心
+            br
+            | 最適合初次接觸溜溜球的你
+        .row
+          .span3
+            h2 規格
+            dl
+              dt Shape
+              dd Sandglass
+
+              dt Weight
+              dd 64.3 g
+
+              dt Width
+              dd 46 mm
+
+              dt Effective Width
+              dd 37.56 mm
+
+              dt Diameter
+              dd 55 mm
+
+              dt Gap Width
+              dd 4.2 mm
+
+              dt Bearing Size
+              dd C Bearing
+
+              dt Gap Type
+              dd Spacer
+
+              dt Stock Response System
+              dd Silicone (thickness 1 mm)
+            a(href='https://www.facebook.com/media/set/?set=a.10150464275907744.422150.293113882743&type=3')
+              .btn.btn-primary 更多圖片 &raquo;
+          #psg_feature.span9
+            div
+            div
+            div
+            div
+              .feature_title 耐用、耐衝擊且易保養
+              .feature_content
+                | 使用的塑膠材料能承受大部份遊玩時的衝擊
+                br
+                | 且選用與市面上的溜溜球相比更加粗壯的軸心
+                br
+                | 再加上金屬製軸承底座使溜溜球更加穩定耐用
+                br
+                | 預先處理過的不鏽鋼軸承
+                br
+                | 讓您從打開包裝的瞬間就可以全力空轉
+            div
+              .feature_title 色彩繽紛的經典弧線
+              .feature_content
+                | 裕和商店最著名的沙漏弧線
+                br
+                | 讓你在收發球時更加的舒適自然
+                br
+                | 同時提升招式與招式間的流暢性
+            div
+              .feature_title 獨特的外蓋設計
+              .feature_content
+                | PSG優異性能的來源
+                br
+                | 精心調整的重量適合各階段的玩家
+      #comet.tab-pane
+        #comet_banner.hero-unit
+          h1 Comet
+          p
+            | Adegleyoyos x 新加坡溜溜球冠軍 Iskandar Shah 跨國合作
+            br
+            | 充滿侵略性的惹火外觀
+            br
+            | 讓你不管在何處都是最搶眼的新星
+        .row
+          .span3
+            h2 規格
+            dl
+              dt Shape
+              dd Sandglass
+
+              dt Weight
+              dd 68.5 g
+
+              dt Width
+              dd 40.0 mm
+
+              dt Effective Width
+              dd 35.36 mm
+
+              dt Diameter
+              dd 56 mm
+
+              dt Gap Width
+              dd 4.56 mm
+
+              dt Bearing Size
+              dd C Bearing
+
+              dt Gap Type
+              dd Fixed
+
+              dt Stock Response System
+              dd Silicone (thickness 1 mm)
+            a(href='https://www.facebook.com/media/set/?set=a.10150477221047744.423537.293113882743&type=3')
+              .btn.btn-primary 更多圖片 &raquo;
+          #comet_feature.span9
+      #glaze.tab-pane
+        #glaze_banner.hero-unit
+          h1 Glaze
+          p
+            | 優雅精細的古典花紋設計，一眼難忘
+            br
+            | 細緻緊實的金屬球體，讓溜溜球行雲流水地在手中來去自如
+        .row
+          .span3
+            h2 規格
+            dl
+              dt Shape
+              dd Sandglass
+
+              dt Weight
+              dd 63.6 g
+
+              dt Width
+              dd 37.8 mm
+
+              dt Effective Width
+              dd 32.96 mm
+
+              dt Diameter
+              dd 50 mm
+
+              dt Gap Width
+              dd 4.56 mm
+
+              dt Bearing Size
+              dd C Bearing
+
+              dt Gap Type
+              dd Fixed
+
+              dt Stock Response System
+              dd Silicone (thickness 0.5 mm)
+            a(href='https://www.facebook.com/media/set/?set=a.10150477086992744.423526.293113882743&type=3')
+              .btn.btn-primary 更多圖片 &raquo;
+          #glaze_feature.span9
+

@@ -1,17 +1,25 @@
 application: adegleyoyos
 version: 1
-runtime: python
+runtime: python27
 api_version: 1
+threadsafe : no
 
 handlers:
-- url: /style
-  static_dir: style
+- url: /css
+  static_dir: css
   
-- url: /image
-  static_dir: image
+- url: /img
+  static_dir: img
   
-- url: /script
-  static_dir: script
+- url: /js
+  static_dir: js
   
 - url: .*
   script: main.py
+
+libraries:
+- name: webapp2
+  version: "2.5.1"
+
+- name: jinja2
+  version: latest

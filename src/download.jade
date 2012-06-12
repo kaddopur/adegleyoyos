@@ -1,0 +1,60 @@
+extends base
+
+block css
+  link(rel='stylesheet', href='/css/download.css')
+
+block js
+  script(src='/js/download.js')
+
+block content
+  .tabbable
+    ul.nav.nav-pills
+      li.active
+        a(href='#wallpaper', data-toggle='tab')
+          span#wallpaper_anc 桌布
+      //li
+        a(href='#app', data-toggle='tab')
+          span#app_anc App
+      li
+        a(href='#mod', data-toggle='tab')
+          span#mod_anc 模版
+    .tab-content
+      #wallpaper.tab-pane.active
+        .row
+          .span3
+            .man
+            h3 攝影師 CHIU Shun-Yi
+            p
+              a(href='https://www.facebook.com/profile.php?id=100001215134014&sk=photos', target='_blank')
+                img.icon(src='img/fb.png')
+              a(href='http://www.flickr.com/photos/adegle/', target='_blank')
+                img.icon(src='img/flickr.png')
+              a(href='http://goods.ruten.com.tw/item/show?21112027213079', target='_blank')
+                img.icon(src='img/ruten.png')
+            p
+              | 在2011年與
+              strong Adegleyoyos 裕和商店
+              | 負責人相識，發現到溜溜球其實不僅只是玩具，希望可以替溜溜球呈現出一些新的風貌，同樣是身為創意工作者的我們在經過多次的腦力激盪後，開始與外拍model合作進行了一連串的企劃，共同為溜溜球玩家們打造出全新的視覺享受與風格。並且也希望這些企劃能夠成為更多從未接觸過溜溜球的朋友們喜歡上這項運動的契機。
+            P 在2011年這一年中有一些初步的成果，期待在未來的路上能夠繼續帶給大家溜溜球的各種風貌，並感謝這一年來團隊裡所有人的努力與貢獻，謝謝。
+          .span8.offset1
+            #psg
+              h3 psg
+              hr
+
+      #mod.tab-pane
+        .row
+          .span3
+            h3 使用方法
+            ol
+              li 下載的pdf檔後不縮放大小列印
+              li 將模版沿紅線裁切下來，並固定在貼紙上(例: 卡典希德)
+              li 依照圖型裁切貼紙
+              li 將貼紙依示意圖黏貼於球體
+          .span3
+            h3 psg裝飾用貼紙模版
+            a(href='/img/mod/psg_sticker_mod.pdf', target='_blank')
+              img.tile(src='img/mod/psg_sticker_mod.png')
+
+
+
+

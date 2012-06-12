@@ -1,407 +1,70 @@
-﻿{% extends "base.html" %}
-
-{% block style %}
-  .man {
-    background-position: left top;
-    background-repeat: no-repeat;
-    height: 300px; 
-    background-size:contain;
-    -webkit-box-reflect: below 1px -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), color-stop(0.85, transparent), to(white)) 0 fill stretch stretch
-  }
-  
-  .wallpaper {
-    max-height: 180px;
-    margin: 0 5px 15px 0;
-    border-radius: 5px;
-    -webkit-box-shadow: 2px 2px 5px #aaa;
-  }
-  
-  .tile {
-    width: 150px;
-    margin: 0 auto 0;
-    border-radius: 5px;
-    -webkit-box-shadow: 2px 2px 5px #aaa;
-  }
-  
-  .icon {
-    -webkit-box-shadow: 1px 1px 2px #aaa;
-    border: 1px solid #ccc; 
-    border-radius: 2px;
-  }
-  
-  .episode {
-    padding: 0;
-    margin: 0 0 40px 0;
-  }
-  
-  h6 {
-    margin: -12px 0 0;
-    text-transform: capitalize;
-  }
-  
-{% endblock %}
-
-    
-{% block content %}
-<ul class="pills" data-tabs="tabs">
-  <li class="active"><a href="#preface"><span id="preface_anc">基礎教學</span></a></li>
-  <li><a href="#beginner"><span id="beginner_anc">入門玩家</span></a></li>
-  <!--
-  <li><a href="#junior"><span id="junior_anc">初學玩家</span></a></li>
-  <li><a href="#primary"><span id="primary_anc">初級玩家</span></a></li>
-  <li><a href="#1a"><span id="1a_anc">進階玩家</span></a></li>
-  -->
-</ul>
-
-<div id="my-tab-content" class="tab-content">
-  <div class="active tab-pane" id="preface">
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/DgzLOZ7mVUM?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>溜溜球繩的安裝</h2>
-          <h6>installation</h6>
-        </hgroup>
-        <p>
-        
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/Xvt8LqNn3SI?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>溜溜球繩的纏繞與持球動作</h2>
-          <h6>wind up & holding</h6>
-        </hgroup>
-        <p>
-          
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/Mii4c6NTuM0?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>溜溜球軸承的移除</h2>
-          <h6>removing bearing</h6>
-        </hgroup>
-        <p>
-          
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/aSCQRJ6D844?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>溜溜球的拆解</h2>
-          <h6>Disassemble</h6>
-        </hgroup>
-        <p>
-          
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/pcyvnDMC4ys?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>溜溜球的安裝</h2>
-          <h6>Assemble</h6>
-        </hgroup>
-        <p>
-          
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/uNd3zItk1xA?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>溜溜球安裝錯誤排除</h2>
-          <h6>Assemble Troubleshooting</h6>
-        </hgroup>
-        <p>
-          
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/cAclHIHkS6E?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>如何移除膠貼</h2>
-          <h6>Silicone Pads Remove</h6>
-        </hgroup>
-        <p>
-          
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/z1pDa8z5q9k?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>如何安裝膠貼</h2>
-          <h6>Silicone Pads Install</h6>
-        </hgroup>
-        <p>
-          
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/_ndxyz5JUK0?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>軸承如何上油</h2>
-          <h6> Lubricate Bearing</h6>
-        </hgroup>
-        <p>
-          
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-  </div><!--preface-->
-  
-  <div class="tab-pane" id="beginner">
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/7W0jwbJaqCM?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>直向綁線收球</h2>
-          <h6>Front Throw Sleeper and Bind Return</h6>
-        </hgroup>
-        <p>
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/hpEiRA06itA?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>橫向綁線收球</h2>
-          <h6>Side Throw Sleeper and Bind Return</h6>
-        </hgroup>
-        <p>
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/DBvaOb4KLRM?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>時鐘搖擺</h2>
-          <h6>Rock the Baby</h6>
-        </hgroup>
-        <p>
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/NpoHFK1vx74?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>東京鐵塔</h2>
-          <h6>Tokyo Tower</h6>
-        </hgroup>
-        <p>
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/lEXQtszzmcE?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>電梯</h2>
-          <h6>Elevator</h6>
-        </hgroup>
-        <p>
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/BGtbUzsK9j0?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>摩托車</h2>
-          <h6>Motocycle</h6>
-        </hgroup>
-        <p>
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/MmljuT01f10?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>比基尼</h2>
-          <h6>Bikini</h6>
-        </hgroup>
-        <p>
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/yy4aYj_AVEg?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>摩天輪</h2>
-          <h6>Pinwheel</h6>
-        </hgroup>
-        <p>
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/FO4uSPB6cxc?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>單手星</h2>
-          <h6>Star</h6>
-        </hgroup>
-        <p>
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/bhLOKLFJhlQ?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>雙手星</h2>
-          <h6>Two Handed Star</h6>
-        </hgroup>
-        <p>
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/P913DXMxr2E?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>火箭</h2>
-          <h6>Rocket</h6>
-        </hgroup>
-        <p>
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-    
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/tEO1r1qKBuM?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <hgroup>
-          <h2>上線</h2>
-          <h6>Trapeze</h6>
-        </hgroup>
-        <p>
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-  </div><!--beginner-->
-  
-  <div class="tab-pane" id="junior">
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/e82VE8UtW8A" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <h2>上線</h2>
-        <p>
-          juniorjuniorjuniorjuniorjuniorjuniorjuniorjuniorjuniorjuniorjuniorjuniorjunior
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-  </div><!--junior-->
-  
-  <div class="tab-pane" id="primary">
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/e82VE8UtW8A" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <h2>上線</h2>
-        <p>
-          primaryprimaryprimaryprimaryprimaryprimaryprimaryprimaryprimaryprimaryprimaryprimaryprimary
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-  </div><!--primary-->
-  
-  <div class="tab-pane" id="1a">
-    <div class="row">
-      <div class="span10 episode">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/e82VE8UtW8A" frameborder="0" allowfullscreen></iframe>
-      </div><!--video-->
-      <div class="span6">
-        <h2>上線</h2>
-        <p>
-          1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a
-        </p>
-      </div><!--script-->
-    </div><!--episode-->
-  </div><!--1a-->
- 
-</div>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <title>Adegleyoyos</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Jason C. Huang">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="Adegle,Adegleyoyos,裕和商店,教學,臺灣,新竹互動式溜溜球協會,Taiwan,Hsinchu,yoyo,yo-yo,溜溜球,台灣,新竹,搖搖,悠悠球,悠悠,sport,新竹市立體育場">
+    <link rel="icon" href="/img/favicon.ico">
+    <link rel="image_src" href="/img/logo_fb.png">
+    <!-- style-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/tutorial.css">
+    <!-- javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/tutorial.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a id="link_logo" href="/" class="brand"><img src="/img/logo.png"></a>
+          <ul class="nav">
+            <li id="link_index"><a href="/">主頁</a></li>
+            <li id="link_product"><a href="/product">產品介紹</a></li>
+            <li id="link_tutorial"><a href="/tutorial">線上教學</a></li>
+            <li id="link_download"><a href="/download">相關下載</a></li>
+            <li id="link_about"><a href="/about">關於我們</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="main" class="container">
+      <div class="tabbable">
+        <ul class="nav nav-pills">
+          <li class="active"><a href="#preface" data-toggle="tab">基礎教學</a></li>
+          <li><a href="#beginner" data-toggle="tab">入門玩家</a></li><!--li<a href="#junior" data-toggle="tab">初學玩家</a>--><!--li<a href="#primary" data-toggle="tab">初級玩家</a>--><!--li<a href="#1a" data-toggle="tab">進階玩家</a>-->
+        </ul>
+        <div class="tab-content">
+          <div id="preface" class="tab-pane active">
+            <div class="tabbable tabs-left">
+              <ul class="nav nav-tabs"></ul>
+              <div class="tab-content"></div>
+            </div>
+          </div>
+          <div id="beginner" class="tab-pane">
+            <div class="tabbable tabs-left">
+              <ul class="nav nav-tabs"></ul>
+              <div class="tab-content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <hr>
+        <div class="row">
+          <div class="span3">
+            <p>&copy; Adegleyoyos 2012</p>
+          </div>
+          <div class="span9">
+            <p id="contact">黃麟凱 HUANG Lin-Kai<br>adegleyoyo [AT] gmail.com<br>+886-919226396</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

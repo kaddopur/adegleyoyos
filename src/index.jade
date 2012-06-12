@@ -1,0 +1,55 @@
+extends base
+
+block css
+  link(rel='stylesheet', href='/css/index.css')
+
+block js
+  script(src='/js/index.js')
+
+block content
+  .hero-unit
+    h1 Asteroid降臨地球
+    p
+      | 裕和商店2012年最新作品全球同步上市
+      br
+      | 全新手感等著你來嘗試
+    p
+      a.btn.btn-primary(href='/product') 詳細訊息 &raquo;
+
+  .row
+    .span4
+      h2 產品介紹
+      p 在你選購溜溜球時，你會希望它能擁有絕佳性能、在線上能夠滑順運行。Adegleyoyos 的溜溜球正是如此，因為我們的設計不只是讓它美觀漂亮，而且也讓它同樣地持久耐用。
+      p
+        a.btn(href='/product')進一步了解 &raquo;
+
+    .span4
+      h2 線上教學
+      p 想要進入溜溜球的世界嗎？我們的免費線上教學將會帶領你一步一步邁向卓越。從初學者入門的基礎課程到世界高手的最新招式，我們都有詳細的分析及解說。想要變強嗎？那就趕緊準備好你的溜溜球一起來練習吧。<br />(本教學陸續更新中，請持續關注)
+      p
+        a.btn(href='/tutorial')馬上前往 &raquo;
+
+    .span4
+      h2 相關下載
+      p 想要展現你對溜溜球的熱愛嗎？把你的電腦桌布換成我們為你精心設計的桌布吧！這邊還有 Adegleyoyos 產品相關的免費 DIY 資源，快來創作專屬於自己的溜溜球吧！
+      p
+        a.btn(href='/download')免費下載 &raquo;
+
+  #partner
+    .row
+      .span12.vender-title
+        h3 Cooperators 合作夥伴
+      #cooperators.span12
+
+      .span12.vender-title
+        h3 Asia 亞洲
+      #asia.span12
+
+      .span12.vender-title
+        h3 America 美洲
+      #america.span12
+
+      .span12.vender-title
+        h3 Europe 歐洲
+      #europe.span12
+

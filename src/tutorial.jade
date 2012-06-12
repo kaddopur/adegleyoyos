@@ -1,0 +1,33 @@
+extends base
+
+block css
+  link(rel='stylesheet', href='/css/tutorial.css')
+
+block js
+  script(src='/js/tutorial.js')
+
+block content
+  .tabbable
+    ul.nav.nav-pills
+      li.active
+        a(href='#preface', data-toggle='tab') 基礎教學
+      li
+        a(href='#beginner', data-toggle='tab') 入門玩家
+      //li
+        a(href='#junior', data-toggle='tab') 初學玩家
+      //li
+        a(href='#primary', data-toggle='tab') 初級玩家
+      //li
+        a(href='#1a', data-toggle='tab') 進階玩家
+
+    .tab-content
+      #preface.tab-pane.active
+        .tabbable.tabs-left
+          ul.nav.nav-tabs
+          .tab-content
+      #beginner.tab-pane
+        .tabbable.tabs-left
+          ul.nav.nav-tabs
+          .tab-content
+
+  
