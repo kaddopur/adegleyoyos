@@ -51,12 +51,14 @@
       case 'English':
         source = 'en';
     }
-    $('#link_index a').html(nav_lang[source].home);
-    $('#link_product a').html(nav_lang[source].product);
-    $('#link_tutorial a').html(nav_lang[source].tutorial);
-    $('#link_download a').html(nav_lang[source].download);
-    $('#link_about a').html(nav_lang[source].about);
-    return $('#menu > a').html(nav_lang[source].other + "<b class='caret'></b>");
+    if (source) {
+      $('#link_index a').html(nav_lang[source].home);
+      $('#link_product a').html(nav_lang[source].product);
+      $('#link_tutorial a').html(nav_lang[source].tutorial);
+      $('#link_download a').html(nav_lang[source].download);
+      $('#link_about a').html(nav_lang[source].about);
+      return $('#menu > a').html(nav_lang[source].other + "<b class='caret'></b>");
+    }
   };
 
   $(function() {
