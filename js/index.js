@@ -72,6 +72,10 @@
         site: 'https://www.facebook.com/YoyoCorner',
         logo: 'yoyocorner.png'
       }, {
+        name: 'YOYOISLAND',
+        site: 'http://yoyoisland.jp/',
+        logo: 'yoyoisland.png'
+      }, {
         name: 'YoyoThailand',
         site: 'http://www.yoyothailand.com/',
         logo: 'yoyothailand.png'
@@ -109,6 +113,10 @@
         name: 'Euro-Yo',
         site: 'http://www.euro-yo.com/',
         logo: 'euroyo.png'
+      }, {
+        name: 'Reflexshop',
+        site: 'http://reflexshop.hu/',
+        logo: 'reflexshop.png'
       }, {
         name: 'slusny',
         site: 'http://slusny.net/',
