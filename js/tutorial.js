@@ -102,6 +102,22 @@
       title: '直向上線',
       eng: 'Overmount',
       youtube: '4ePHuE6PTJk'
+    }, {
+      title: '1.5上線',
+      eng: '1.5 Trapeze',
+      youtube: 'ygIW1HB-_fE'
+    }, {
+      title: '直向右手上線',
+      eng: 'Splite Mount',
+      youtube: 'fLlUi4wwZYs'
+    }, {
+      title: '雙重上線',
+      eng: 'Double Trapeze',
+      youtube: 'svu0nlNo9Vk'
+    }, {
+      title: '左右上線',
+      eng: 'Trapeze and His Brother',
+      youtube: 'MrHhJDVndeI'
     }
   ];
 
@@ -110,7 +126,7 @@
     for (i = 0, _len = data.length; i < _len; i++) {
       t = data[i];
       $("#" + target + " .nav").append("      <li>        <a href='#" + target + "_" + i + "', data-toggle='tab'>" + t.title + "</a>      </li>");
-      $("#" + target + " .tab-content").append("      <div id='" + target + "_" + i + "' class='tab-pane'>        <div class='episode'>          <iframe width='560' height='315' src='http://www.youtube.com/embed/" + t.youtube + "?wmode=transparent' frameborder='0' allowfullscreen></iframe>        </div>        <hgroup>          <h2>" + t.title + "</h2>          <h6>" + t.eng + "</h6>        </hgroup>      </div>");
+      $("#" + target + " .tab-content").append("      <div id='" + target + "_" + i + "' class='tab-pane'>        <div class='view'>          <div class='episode'>            <iframe width='560' height='315' src='http://www.youtube.com/embed/" + t.youtube + "?wmode=transparent' frameborder='0' allowfullscreen></iframe>          </div>          <hgroup>            <h2>" + t.title + "</h2>            <h6>" + t.eng + "</h6>          </hgroup>        </div>      </div>");
     }
     $("#" + target + " .nav li:first-child").addClass('active');
     return $("#" + target + " .tab-content .tab-pane:first-child").addClass('active');

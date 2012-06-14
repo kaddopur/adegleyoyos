@@ -20,7 +20,14 @@ tuto_beginner = [{title: '直向綁線收球', eng: 'Front Throw Sleeper and Bin
                  {title: '雙手星',       eng: 'Two Handed Star',                     youtube: 'bhLOKLFJhlQ'},
                 #{title: }
                  {title: '火箭',         eng: 'Rocket',                              youtube: 'P913DXMxr2E'},
-                 {title: '上線',         eng: 'Trapeze',                             youtube: 'tEO1r1qKBuM'},]
+                 {title: '上線',         eng: 'Trapeze',                             youtube: 'tEO1r1qKBuM'},
+                 {title: '下方上線',     eng: 'Trapeze Undermount',                  youtube: 'j196Qo78lrg'},
+                 {title: '直向下方上線', eng: 'Undermount',                          youtube: 'z7mxljrS7Ag'},
+                 {title: '直向上線',     eng: 'Overmount',                           youtube: '4ePHuE6PTJk'},
+                 {title: '1.5上線',      eng: '1.5 Trapeze',                         youtube: 'ygIW1HB-_fE'},
+                 {title: '直向右手上線', eng: 'Splite Mount',                        youtube: 'fLlUi4wwZYs'},
+                 {title: '雙重上線',     eng: 'Double Trapeze',                      youtube: 'svu0nlNo9Vk'},
+                 {title: '左右上線',     eng: 'Trapeze and His Brother',             youtube: 'MrHhJDVndeI'},]
 
 loadTutorials = (target, data)->
   for t, i in data
@@ -30,13 +37,15 @@ loadTutorials = (target, data)->
       </li>")
     $("##{target} .tab-content").append("
       <div id='#{target}_#{i}' class='tab-pane'>
-        <div class='episode'>
-          <iframe width='560' height='315' src='http://www.youtube.com/embed/#{t.youtube}?wmode=transparent' frameborder='0' allowfullscreen></iframe>
+        <div class='view'>
+          <div class='episode'>
+            <iframe width='560' height='315' src='http://www.youtube.com/embed/#{t.youtube}?wmode=transparent' frameborder='0' allowfullscreen></iframe>
+          </div>
+          <hgroup>
+            <h2>#{t.title}</h2>
+            <h6>#{t.eng}</h6>
+          </hgroup>
         </div>
-        <hgroup>
-          <h2>#{t.title}</h2>
-          <h6>#{t.eng}</h6>
-        </hgroup>
       </div>")
   $("##{target} .nav li:first-child").addClass('active')
   $("##{target} .tab-content .tab-pane:first-child").addClass('active')
