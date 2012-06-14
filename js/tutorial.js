@@ -90,6 +90,18 @@
       title: '上線',
       eng: 'Trapeze',
       youtube: 'tEO1r1qKBuM'
+    }, {
+      title: '下方上線',
+      eng: 'Trapeze Undermount',
+      youtube: 'j196Qo78lrg'
+    }, {
+      title: '直向下方上線',
+      eng: 'Undermount',
+      youtube: 'z7mxljrS7Ag'
+    }, {
+      title: '直向上線',
+      eng: 'Overmount',
+      youtube: '4ePHuE6PTJk'
     }
   ];
 
