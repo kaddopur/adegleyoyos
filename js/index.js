@@ -115,7 +115,7 @@
         logo: 'euroyo.png'
       }, {
         name: 'Reflexshop',
-        site: 'http://reflexshop.hu/',
+        site: 'http://reflexshop.hu/371-adegle-yo-yo',
         logo: 'reflexshop.png'
       }, {
         name: 'slusny',

@@ -41,12 +41,12 @@ loadPartners = ->
       </a>")
 
 
-  europe = [{name: 'Euro-Yo',    site: 'http://www.euro-yo.com/',  logo: 'euroyo.png'},
-            {name: 'Reflexshop', site: 'http://reflexshop.hu/',    logo: 'reflexshop.png'},
-            {name: 'slusny',     site: 'http://slusny.net/',       logo: 'slusny.png'},
-            {name: 'yoyomania',  site: 'http://www.yoyomania.cz/', logo: 'yoyomania.png'},
-            {name: 'yoyoraven',  site: 'http://yoyoraven.eu/',     logo: 'yoyoraven.png'},
-            {name: 'YoyoZ',      site: 'http://yoyoz.co.uk/',      logo: 'yoyoz.png'}]
+  europe = [{name: 'Euro-Yo',    site: 'http://www.euro-yo.com/',               logo: 'euroyo.png'},
+            {name: 'Reflexshop', site: 'http://reflexshop.hu/371-adegle-yo-yo', logo: 'reflexshop.png'},
+            {name: 'slusny',     site: 'http://slusny.net/',                    logo: 'slusny.png'},
+            {name: 'yoyomania',  site: 'http://www.yoyomania.cz/',              logo: 'yoyomania.png'},
+            {name: 'yoyoraven',  site: 'http://yoyoraven.eu/',                  logo: 'yoyoraven.png'},
+            {name: 'YoyoZ',      site: 'http://yoyoz.co.uk/',                   logo: 'yoyoz.png'}]
   for p in europe
     $('#europe').append("
       <a href='#{p.site}' title='#{p.name}' target='_blank'>
