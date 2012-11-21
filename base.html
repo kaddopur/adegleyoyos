@@ -1,142 +1,58 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
   <head>
-    <meta charset="utf-8">
+    <!-- Version 3.1-->
     <title>Adegleyoyos</title>
+    <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="author" content="Jason C. Huang">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="keywords" content="Adegle,Adegleyoyos,裕和商店,教學,臺灣,新竹互動式溜溜球協會,Taiwan,Hsinchu,yoyo,yo-yo,溜溜球,台灣,新竹,搖搖,悠悠球,悠悠,sport,新竹市立體育場" />
-    
-    <link rel="icon" href="image/favicon.ico">
-    <link rel="image_src" href="image/logo_fb.png" />
-    
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    
-    <!-- Le styles -->
-    <link rel="stylesheet" href="style/bootstrap.css">
-    <link rel="stylesheet" href="script/galleria/themes/classic/galleria.classic.css">
-    <style type="text/css">
-      body {
-        padding-top: 40px;
-      }
-      {% block style %}{% endblock %}
-    </style>
-    
-    <!-- Le javascript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script src="script/bootstrap-tabs.js"></script>
-    <script src="script/bootstrap-modal.js"></script>
-    <script src="script/galleria/galleria-1.2.5.js"></script>
-    <script src="script/galleria/themes/classic/galleria.classic.min.js"></script>
-    
-    <script>
-      //create onDomReady Event
-      window.onDomReady = DomReady;
-
-      //Setup the event
-      function DomReady(fn) {
-          //W3C
-          if(document.addEventListener) {
-              document.addEventListener("DOMContentLoaded", fn, false);
-          }
-          //IE
-          else {
-              document.onreadystatechange = function(){readyState(fn)};
-          }
-      }
-
-      //IE execute function
-      function readyState(fn) {
-          //dom is ready for interaction
-          if(document.readyState == "interactive") {
-              fn();
-          }
-      }
-    
-      //execute as soon as DOM is loaded
-      window.onDomReady(onReady);
-
-      //do on ready
-      function onReady() {
-        // nav bar activation
-        var target = window.location.pathname.substring(1);
-        if(target == ''){
-          target = 'index';
-          document.getElementById("link_logo").setAttribute("href", "#");
-        }
-        var root = document.getElementById('link_'+target)
-        root.setAttribute("class", "active");
-        root.firstChild.setAttribute("href", "#");
-        
-        // make anchor alive (to be refine)
-        if(window.location.pathname == "/product"){
-          $(window.location.hash+'_anc').click();
-          $(window.location.hash+'_anc').scrollTop();
-        }
-      }
-      
-      function add_gallery(model, amount){
-        var data = [];
-        for(var i=1; i<=amount; i++){
-          var dic = {};
-          dic["image"] = "image/"+model+"/"+i+".jpg";
-          dic["thumb"] = "image/"+model+"/thumb/"+i+".jpg";
-          data.push(dic);
-        }
-        
-        $('#gallery_'+model).galleria({
-          showCounter: false,
-          data_source: data,
-          height: 480
-        });
-      }
-      
-      function clear_gallery(model){
-        $('#gallery_'+model).clear();
-      }
-    </script>
+    <meta name="keywords" content="Adegle,Adegleyoyos,裕和商店,教學,臺灣,新竹互動式溜溜球協會,Taiwan,Hsinchu,yoyo,yo-yo,溜溜球,台灣,新竹,搖搖,悠悠球,悠悠,sport,新竹市立體育場">
+    <link rel="icon" href="/img/favicon.ico">
+    <link rel="image_src" href="/img/logo_fb.png">
+    <!-- css-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/base.css">
+    <!-- js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/base.js"></script>
   </head>
-
   <body>
-    {% block facebook %}{% endblock %}
-    
-    <div class="topbar">
-      <div class="fill">
-        <div class="container" >
-          <a id="link_logo" class="brand" href="/" style="padding:7px 20px 3px 0px; margin:0;"><img src="image/logo.png" style="height:30px;"></a>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a id="link_logo" href="/" class="brand"><img src="/img/logo.png"></a>
           <ul class="nav">
             <li id="link_index"><a href="/">主頁</a></li>
             <li id="link_product"><a href="/product">產品介紹</a></li>
             <li id="link_tutorial"><a href="/tutorial">線上教學</a></li>
             <li id="link_download"><a href="/download">相關下載</a></li>
-            <!--<li id="link_commu"><a href="#">溜溜球社群</a></li>-->
             <li id="link_about"><a href="/about">關於我們</a></li>
+          </ul>
+          <ul class="nav pull-right">
+            <li id="menu" class="dropdown"><a data-toggle="dropdown" href="menu" class="dropdown-toggle">其他語言<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li> <a id="to_chinese" href="#">中文</a></li>
+                <li><a id="to_english" href="#">English</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
     </div>
-    
-    <div class="container">
-      {% block content %}{% endblock %}
+    <div id="main" class="container">
       <footer>
+        <hr>
         <div class="row">
-            <div class="span4">
-              <pp>&copy; Adegleyoyos 2012</p>
-            </div>
-            
-            <div class="span12">
-              <p style="text-align: right;">
-              黃麟凱 HUANG Lin-Kai<br />
-              adegleyoyo [AT] gmail.com<br />
-              +886-919226396
-            </div>
+          <div class="span3">
+            <p>&copy; Adegleyoyos 2012</p>
+          </div>
+          <div class="span9">
+            <p id="contact">黃麟凱 HUANG Lin-Kai<br>adegleyoyo [AT] gmail.com<br>+886-919226396</p>
+          </div>
+        </div>
       </footer>
-    </div> <!-- /container -->
-    
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    </div>
   </body>
 </html>
