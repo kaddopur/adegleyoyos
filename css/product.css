@@ -2,23 +2,23 @@
   background-image: url("/img/psg-gem/cover.png");
 }
 #psg-gem_feature {
-  background-image: url("/img/asteroid/feature/all.png");
-  height: 1100px;
+  background-image: url("/img/psg-gem/feature/all.png");
+  height: 1050px;
 }
 #psg-gem_feature > div:nth-child(1) {
   position: relative;
-  top: 120px;
-  left: 320px;
+  top: 160px;
+  left: 350px;
 }
 #psg-gem_feature > div:nth-child(2) {
   position: relative;
-  top: 350px;
+  top: 450px;
   left: 100px;
 }
 #psg-gem_feature > div:nth-child(3) {
   position: relative;
-  top: 600px;
-  left: 200px;
+  top: 720px;
+  left: 290px;
 }
 #asteroid_banner {
   background-image: url("/img/asteroid/cover.png");
